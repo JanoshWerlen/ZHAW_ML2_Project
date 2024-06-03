@@ -1,0 +1,563 @@
+[
+    {
+        "article_number": "Art. 1",
+        "title": "Rechtsgrundlagen",
+        "text": "Dieses Arbeitszeitreglement basiert auf folgenden Rechtsgrundlagen:\n Assistenzärztinnen- und -ärztereglement (AAR)\n Personalrecht (PR)\n Ausführungsbestimmungen zum Personalrecht (AB PR)\n Arbeitsgesetz (ArG)\n Verordnung 2 zum Arbeitsgesetz (ArGV 2)",
+        "metadata": {
+            "type": "Rechtsgrundlagen",
+            "tags": [
+                "Arbeitszeitreglement",
+                "Assistenzärztinnen- und -ärztereglement",
+                "Personalrecht",
+                "Arbeitsgesetz",
+                "Verordnung"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 2",
+        "title": "Persönlicher Geltungsbereich",
+        "text": "Diese Weisung gilt für alle AA und OA i.V. mit und ohne Facharzttitel.\nAls OA i.V. mit Facharzttitel gelten im Sinne dieser Weisung alle OA mit Facharzttitel mit Relevanz für das eingesetzte Fachgebiet.",
+        "metadata": {
+            "type": "Geltungsbereich",
+            "tags": [
+                "Weisung",
+                "AA",
+                "OA",
+                "Facharzttitel",
+                "Fachgebiet"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 3",
+        "title": "Sachlicher Geltungsbereich",
+        "text": "Für hier nicht geregelte Anstellungsbedingungen wie z.B. betreffend Ferien, Urlauben, Krankheit/Unfall etc. gilt die Gesamtspitalweisung GSP.ORG.065 \"Arbeitszeitreglement Stadtspital Zürich\".",
+        "metadata": {
+            "type": "Geltungsbereich",
+            "tags": [
+                "Anstellungsbedingungen",
+                "Ferien",
+                "Urlaub",
+                "Krankheit",
+                "Unfall"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 4",
+        "title": "Arbeitszeiten und Arbeitsplanung",
+        "text": "Arbeitszeiten und persönliche Arbeitszeiterfassung\nDie wöchentliche Soll-Arbeitszeit inklusive interner strukturierter Weiterbildungszeit beträgt 50 Stunden.\nArbeits- und Absenzzeiten sind im Polypoint PEP zu erfassen. Dienstanfang und -ende sowie die Pausen sind zu stempeln.",
+        "metadata": {
+            "type": "Arbeitszeiten",
+            "tags": [
+                "Arbeitszeiten",
+                "Arbeitszeiterfassung",
+                "Soll-Arbeitszeit",
+                "Weiterbildungszeit",
+                "Polypoint PEP"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 4.2.1",
+        "title": "Arbeitsfreie Sonntage",
+        "text": "Mindestens 16 freie Sonntage pro Jahr und Kompensation von gearbeiteten Sonn- und Ruhetagen innerhalb von 26 Wochen.\nIn den Wochen ohne freien Sonntag ist in der vorhergehenden oder nachfolgenden Woche im Anschluss an die tägliche Ruhezeit eine wöchentliche Ruhezeit von 36 aufeinander folgenden Stunden zu gewähren.",
+        "metadata": {
+            "type": "Arbeitsplanung",
+            "tags": [
+                "Arbeitsfreie Sonntage",
+                "Kompensation",
+                "Ruhetage",
+                "Wochenruhezeit",
+                "Arbeitszeit"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 4.2.2",
+        "title": "Verlängerte Arbeitswoche",
+        "text": "Planung von maximal sieben Arbeitstage hintereinander (sog. verlängerte Arbeitswoche), und nur dann, wenn die tägliche Tages- und Abendarbeitszeit nicht mehr als 9 Stunden beträgt, die wöchentliche Höchstarbeitszeit im Durchschnitt von zwei Wochen eingehalten wird und im Anschluss an den siebten Tag eine Ruhezeit von 83 Stunden gewährt wird.",
+        "metadata": {
+            "type": "Arbeitsplanung",
+            "tags": [
+                "Verlängerte Arbeitswoche",
+                "Arbeitstage",
+                "Tagesarbeitszeit",
+                "Abendarbeitszeit",
+                "Ruhezeit"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 4.2.3",
+        "title": "Ruhezeit",
+        "text": "Die tägliche Ruhezeit beträgt grundsätzlich elf Stunden.\nDer Zeitraum der Tages- und Abendarbeitszeit darf bis auf höchstens 17 Stunden mit Einschluss der Pausen und Überzeitarbeit verlängert werden, wenn im Durchschnitt einer Kalenderwoche eine tägliche Ruhezeit von mindestens zwölf aufeinanderfolgenden Stunden gewährt wird. Die tägliche Ruhezeit zwischen zwei Arbeitseinsätzen muss dabei mindestens acht aufeinander folgende Stunden betragen.\nDie Ruhezeit darf bis auf 9 Stunden herabgesetzt werden, sofern sie im Durchschnitt von zwei Wochen 12 Stunden beträgt.",
+        "metadata": {
+            "type": "Arbeitsplanung",
+            "tags": [
+                "Ruhezeit",
+                "Tagesarbeitszeit",
+                "Abendarbeitszeit",
+                "Überzeitarbeit",
+                "Arbeitszeit"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 4.2.4",
+        "title": "Tägliche effektive Arbeitszeit",
+        "text": "Die tägliche effektive Arbeitszeit bei Nachtarbeit beträgt grundsätzlich maximal 9 Stunden innerhalb eines Zeitraumes von 10 Stunden.\nAusnahmsweise kann die tägliche effektive Arbeitszeit bei Nachtarbeit auf 10 Stunden erhöht werden, wenn höchstens drei Nächte innerhalb von sieben Tagen Nachtarbeit geleistet wird.\nAusnahmsweise kann die tägliche effektive Arbeitszeit bei Nachtarbeit auf 10 Stunden erhöht werden, wenn ein grosser Teil (mind. 25 %) davon reine Präsenzzeit ist, während der sich die Mitarbeitenden ausruhen können und eine tägl. Ruhezeit von 12 Stunden besteht.\nAusnahmsweise kann der Nachtdienst auf 12 Stunden verlängert werden, wenn die Möglichkeit besteht, sich während mindestens 4 Stunden auszuruhen. Die gesamten 12 Stunden gelten als Arbeitszeit.",
+        "metadata": {
+            "type": "Arbeitsplanung",
+            "tags": [
+                "Nachtarbeit",
+                "Arbeitszeit",
+                "Präsenzzeit",
+                "Ruhezeit",
+                "Nachtdienst"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 4.3.1",
+        "title": "Höchstarbeitszeit",
+        "text": "Die Höchstarbeitszeit beträgt im Quartalsdurchschnitt 55 Stunden pro Woche.",
+        "metadata": {
+            "type": "Arbeitsplanung",
+            "tags": [
+                "Höchstarbeitszeit",
+                "Quartalsdurchschnitt",
+                "Arbeitszeit",
+                "Woche",
+                "Planung"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 4.3.2",
+        "title": "Präsenzzeit",
+        "text": "Die Anzahl geplanter Tagdienste darf zwölf aufeinanderfolgende Dienste nicht überschreiten.\nDie Anzahl geplanter Spät-/Nachtdienste (mit Endzeit ab 20.00 Uhr bis und mit 09.00 Uhr) darf sieben aufeinanderfolgende Dienste nicht überschreiten.\nDie maximale Anwesenheit im Betrieb darf 14 Stunden nicht überschreiten.\nAbweichungen sind nur in Notsituationen möglich. Eine Notsituation liegt namentlich vor, wenn die Dauer des Einsatzes nicht absehbar oder unerwartet länger ist und kein Kollege/keine Kollegin den Fall übernehmen kann. Die vorgesetzte Stelle entscheidet nach pflichtgemässem Ermessen, ob eine Notsituation vorliegt.",
+        "metadata": {
+            "type": "Arbeitsplanung",
+            "tags": [
+                "Präsenzzeit",
+                "Tagdienste",
+                "Nachtdienste",
+                "Anwesenheit",
+                "Notsituationen"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 4.3.3",
+        "title": "Ruhezeit",
+        "text": "Im Anschluss an einen geplanten Präsenzdienst ist eine zusammenhängende Ruhezeit von mindestens zehn Stunden zu gewähren. Von dieser Regelung kann bei Einsätzen abgewichen werden, die im Rahmen von Pikett- oder Hintergrunddiensten geleistet werden und zwei Stunden nicht übersteigen. Das bedeutet gleichzeitig, dass Pikett- und Hintergrunddienste, bei denen es nicht zu einem Einsatz kommt, die Ruhezeit nicht unterbrechen.\nIm Interesse der Gesundheit der Mitarbeitenden einerseits und der Sicherheit der Patientinnen und Patienten andererseits sind lediglich in Ausnahmesituationen längere Pikett- und Hintergrundeinsätze möglich, ohne dass die minimale Ruhezeit eingehalten werden muss. Die vorgesetzte Stelle entscheidet nach pflichtgemässem Ermessen, ob eine Ausnahmesituation vorliegt.",
+        "metadata": {
+            "type": "Arbeitsplanung",
+            "tags": [
+                "Ruhezeit",
+                "Präsenzdienst",
+                "Pikett",
+                "Hintergrunddienst",
+                "Gesundheit"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 4.3.4",
+        "title": "Arbeitsfreies Wochenende",
+        "text": "Es besteht Anspruch auf mindestens ein arbeitsfreies Wochenende pro Monat – d.h. frei von jeglicher Arbeitsverpflichtung, einschliesslich Pikett- oder Hintergrunddienst.\nIm Kalenderjahr müssen mindestens 20 arbeitsfreie Tage auf Sonn- und Feiertage fallen. Tage, an denen Pikett- oder Hintergrunddienst geleistet wird, gelten nicht als arbeitsfreie Tage.\nBei Abwesenheit infolge Krankheit, Unfall sowie bezahltem oder unbezahltem Urlaub wird der Anspruch auf arbeitsfreie Tage pro rata temporis gekürzt.",
+        "metadata": {
+            "type": "Arbeitsplanung",
+            "tags": [
+                "Arbeitsfreies Wochenende",
+                "Sonn- und Feiertage",
+                "Pikett",
+                "Hintergrunddienst",
+                "Arbeitsverpflichtung"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 4.4.1",
+        "title": "AA und OA i.V. ohne Facharzttitel",
+        "text": "Gemäss Art. 15 ArG müssen AA und OA i.V. ohne Facharzttitel ihre Arbeit zwingend durch Pausen von folgender Mindestdauer zu unterbrechen:\nTägliche Arbeitszeit von mehr als 5 ½ Stunden: 15 Minuten\nTägliche Arbeitszeit von mehr als 7 Stunden: 30 Minuten\nTägliche Arbeitszeit von mehr als 9 Stunden: 1 Stunde\nDaraus ergibt sich Folgendes: Pro Halbtag ist eine 15-minütige bezahlte Pause zu gewähren bzw. zu beziehen. Zusätzlich sind alle Dienste von mehr als neun Stunden mit einer unbezahlten Pause von 30 Minuten zu unterbrechen.",
+        "metadata": {
+            "type": "Pausen",
+            "tags": [
+                "Pausen",
+                "Arbeitszeit",
+                "Facharzttitel",
+                "Unterbrechung",
+                "Arbeitsregelung"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 4.4.2",
+        "title": "AA und OA i.V. mit Facharzttitel",
+        "text": "Für AA und OA i.V. mit Facharzttitel gilt die Pausenregelung gemäss Personalrecht.\nDemgemäss ist bei einem Tagespensum von mehr als sechs Stunden grundsätzlich eine unbezahlte Pause von mindestens 30 Minuten einzuhalten.\nPro Halbtag ist eine 15-minütige bezahlte Pause zu gewähren, sofern dies betrieblich möglich ist.",
+        "metadata": {
+            "type": "Pausen",
+            "tags": [
+                "Pausen",
+                "Arbeitszeit",
+                "Facharzttitel",
+                "Personalrecht",
+                "Arbeitsregelung"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 4.4.3",
+        "title": "Konditionen zum Pausenbezug",
+        "text": " Als Pause gelten die Zeiten, in denen nicht gearbeitet werden muss. Ob eine Verpflegung eingenommen werden kann oder der Arbeitsplatz freiwillig nicht verlassen wird, ist nicht massgebend.\n Die effektive Pause ist zwingend zu stempeln.\n Im Polypoint PEP werden bei grundsätzlich allen Diensten ab neun Stunden automatisch 30 Minuten unbezahlte Pause abgezogen, sofern keine oder eine zu kurze Stempelung erfolgt ist. Die vorgesetzten Stellen sind verantwortlich dafür, einen Pausenbezug zu ermöglichen und die Diensteinteilung entsprechend zu planen.\n Auch bezahlte Pausen sind soweit möglich zu beziehen.\n Bei einer Dienstdauer von weniger als neun Stunden sind unbezahlte Pausen zu stempeln, wenn sie bezogen werden. Ein automatischer Abzug von 30 Minuten erfolgt nicht. Die Dienstplanung ist nach Möglichkeit so zu gestalten, dass Pausen effektiv bezogen werden können.",
+        "metadata": {
+            "type": "Pausen",
+            "tags": [
+                "Pausenbezug",
+                "Arbeitszeit",
+                "Pausenregelung",
+                "Stempelung",
+                "Dienstdauer"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 4.4.4",
+        "title": "Pausen mit Anrechnung von Arbeitszeit",
+        "text": "Ausnahmsweise gilt die grundsätzlich unbezahlte Pause als Arbeitszeit, wenn eine der folgenden Voraussetzungen gegeben ist:\na) der Arbeitsplatz kann nicht verlassen werden oder\nb) die oder der Mitarbeitende muss während der Pause zwingend erreichbar und abrufbar sein.",
+        "metadata": {
+            "type": "Pausen",
+            "tags": [
+                "Arbeitszeit",
+                "Pausen",
+                "Unbezahlte Pause",
+                "Erreichbarkeit",
+                "Arbeitsregelung"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 5",
+        "title": "Pikettdienst",
+        "text": "Als Pikettdienst gilt, wenn sich die Ärztin/der Arzt (in der Regel nachts oder an Wochenenden) gemäss Dienstplan ausserhalb des Spitals aufhalten kann, aber innert üblicherweise 30 bis 60 Minuten im Spital einsatzbereit sein muss. Pikettdienst darf auch im Anschluss an die reguläre Arbeit geleistet werden.",
+        "metadata": {
+            "type": "Pikettdienst",
+            "tags": [
+                "Pikettdienst",
+                "Ärztin",
+                "Arzt",
+                "Dienstplan",
+                "Einsatzbereit"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 5.1",
+        "title": "Arbeitsweg bei AA und OA i.V. ohne Facharzttitel",
+        "text": "Die gesamte Dauer des Arbeitsweges gilt als geleistete Einsatzzeit und wird auf dem Arbeitszeitsaldo gutgeschrieben.\nEs besteht kein Anspruch auf Vergütung von Fahrtkosten.",
+        "metadata": {
+            "type": "Pikettdienst",
+            "tags": [
+                "Arbeitsweg",
+                "Einsatzzeit",
+                "Arbeitszeitsaldo",
+                "Vergütung",
+                "Fahrtkosten"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 5.2",
+        "title": "Arbeitsweg bei AA und OA i.V. mit Facharzttitel",
+        "text": "Für den Arbeitsweg (Hin- und Rückweg zusammen) bei einem effektiven Piketteinsatz werden abhängig vom Wohnort pauschal 30, 45 (31 bis 45 Minuten) oder 60 (46 bis 60 Minuten) Minuten auf den Arbeitszeitsaldo angerechnet. Ausschlaggebend ist die Zeit mit dem Auto vom Wohnort bis in den jeweiligen Standort des Stadtspitals gemäss Online-Kartendienst Google Maps. Dabei wird die verkehrsunabhängige Wegzeit (Abfahrt 0.00 Uhr) berechnet. Mitarbeitende, die ein Pikettzimmer benützen, haben keinen Anspruch auf eine Wegzeitvergütung. Für sie beginnt der Piketteinsatz beim Verlassen des Pikettzimmers.\nEs besteht kein Anspruch auf Vergütung von Fahrtkosten.",
+        "metadata": {
+            "type": "Pikettdienst",
+            "tags": [
+                "Arbeitsweg",
+                "Piketteinsatz",
+                "Wohnort",
+                "Arbeitszeitsaldo",
+                "Vergütung"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 5.3",
+        "title": "Ruhezeit nach Pikettdienst bei AA und OA i.V. ohne Facharzttitel",
+        "text": "Bei AA und OA i.V. ohne Facharzttitel müssen die Ruhezeiten gemäss ArG eingehalten werden. Deshalb gilt, dass Arbeitseinsätze im Pikettdienst zwar die tägliche Ruhezeit unterbrechen dürfen, die Ruhezeit jedoch im Anschluss an den Arbeitseinsatz im restlichen Umfang nachgewährt werden muss.\nKann aufgrund der Arbeitseinsätze eine minimale Ruhezeit von vier aufeinanderfolgenden Stunden nicht eingehalten werden, so muss im Anschluss an den letzten Einsatz die tägliche Ruhezeit von elf Stunden nachgewährt werden. Nach Beendigung des letzten Pikettdienstes (mit oder ohne Einsatz) müssen zwei Wochen ohne Pikettdienst folgen. Im Zeitraum von vier Wochen dürfen höchstens sieben Pikettdienste geleistet werden.",
+        "metadata": {
+            "type": "Pikettdienst",
+            "tags": [
+                "Ruhezeit",
+                "Pikettdienst",
+                "Arbeitseinsätze",
+                "Nachgewährung",
+                "Arbeitszeit"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 5.4",
+        "title": "Ruhezeit nach Pikettdienst bei AA und OA i.V. mit Facharzttitel",
+        "text": "Im Anschluss an einen Piketteinsatz ist eine zusammenhängende Ruhezeit von mindestens zehn Stunden zu gewähren. Diese darf durch Pikett- bzw. Hintergrundeinsätze von maximal zwei Stunden unterbrochen werden. Sofern der Pikett- bzw. Hintergrundeinsatz länger als zwei Stunden dauert, muss die Ruhezeit von zehn Stunden anschliessend nachgewährt werden.\nNach Beendigung des letzten Pikettdienstes (mit oder ohne Einsatz) müssen zwei Wochen ohne Pikettdienst folgen. Im Zeitraum von vier Wochen dürfen höchstens sieben Pikettdienste geleistet werden.",
+        "metadata": {
+            "type": "Pikettdienst",
+            "tags": [
+                "Ruhezeit",
+                "Piketteinsatz",
+                "Nachgewährung",
+                "Arbeitszeit",
+                "Pikettdienst"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 5.5",
+        "title": "Arbeitszeitsaldo",
+        "text": "Der Arbeitszeitsaldo entspricht der Differenz zwischen der Ist- und der Soll-Arbeitszeit. Er wird fortlaufend auf- und abgebaut. Der Arbeitszeitsaldo wird inklusive der Stunden aus den Vormonaten auf den nächsten Monat übertragen.",
+        "metadata": {
+            "type": "Arbeitszeitsaldo",
+            "tags": [
+                "Arbeitszeitsaldo",
+                "Ist-Arbeitszeit",
+                "Soll-Arbeitszeit",
+                "Arbeitszeit",
+                "Übertragung"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 5.6",
+        "title": "Kompensation",
+        "text": "Die Kompensation eines positiven Arbeitszeitsaldos kann in Stunden, halben oder ganzen Tagen erfolgen.\nBei negativem Arbeitszeitsaldo sind individuell gewünschte zusätzliche freie Tage als Ferientage und nicht zu Lasten des Arbeitszeitsaldos zu beziehen.",
+        "metadata": {
+            "type": "Kompensation",
+            "tags": [
+                "Kompensation",
+                "Arbeitszeitsaldo",
+                "Ferientage",
+                "Freie Tage",
+                "Arbeitszeit"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 5.7",
+        "title": "Überzeit und Mehrstunden bei AA und OA i.V. ohne Facharzttitel",
+        "text": "Als Überzeit gelten angeordnete Stunden, welche über die Sollarbeitszeit von 50 Stunden pro Woche hinaus zu erbringen sind (Ausnahme: verlängerte Arbeitswoche (Ziffer ergänzen, wenn fertig)). Aufgelaufene Überzeit ist möglichst unterjährig zu kompensieren und darf jährlich insgesamt nicht mehr als 140 Stunden betragen. Dies gilt unabhängig davon, ob Überzeit kompensiert werden kann.\nÜberzeit soll innert einem Jahr durch Freizeit von gleicher Dauer ausgeglichen werden. Eine entsprechende Zustimmungserklärung wird bei Eintritt unterschrieben.\nBei Teilzeitanstellungen gilt die Differenz der individuellen Sollarbeitszeit bis zur maximalen Arbeitszeit von 50 Stunden als Mehrstunden und nicht als Überzeit.",
+        "metadata": {
+            "type": "Überzeit",
+            "tags": [
+                "Überzeit",
+                "Mehrstunden",
+                "Sollarbeitszeit",
+                "Arbeitszeit",
+                "Freizeit"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 5.8.1",
+        "title": "Definition Überstunden",
+        "text": "Als Überstunden gilt Arbeitszeit, die bei zeitlicher Dringlichkeit oder ausserordentlicher Geschäftslast geleistet wird und die quartalsweise Sollarbeitszeit übersteigt.\nAls Überstunden gilt auch Arbeitszeit, die während Piketteinsätzen und Hintergrunddienst (inklusive telefonische oder digitale Beratung) geleistet wird.\nDie Überstunden werden in einem separaten Zeitkonto geführt.\nDie geleisteten Stunden im Pikett-/Hintergrunddienst werden inkl. Zeitzuschlag automatisch auf das Überstundenkonto gebucht. Die anderen Überstunden werden vierteljährlich berechnet und auf das Überstundenkonto gebucht.\nEs liegt in der Führungsverantwortung der vorgesetzten Stelle und in der Eigenverantwortung der Mitarbeitenden, für einen Ausgleich des Arbeitszeitsaldos innerhalb des Quartals zu sorgen.",
+        "metadata": {
+            "type": "Überstunden",
+            "tags": [
+                "Überstunden",
+                "Arbeitszeit",
+                "Dringlichkeit",
+                "Geschäftslast",
+                "Zeitkonto"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 5.8.2",
+        "title": "Kompensation",
+        "text": "Überstunden sind im Folgequartal durch Freizeit zu kompensieren, wobei zur effektiven Dauer der geleisteten Überstunden ein Zeitzuschlag von 25 Prozent gewährt wird.",
+        "metadata": {
+            "type": "Überstunden",
+            "tags": [
+                "Kompensation",
+                "Überstunden",
+                "Freizeit",
+                "Zeitzuschlag",
+                "Arbeitszeit"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 5.8.3",
+        "title": "Auszahlung",
+        "text": "Ist eine Kompensation aus zwingenden betrieblichen Gründen nicht möglich, können die Überstunden zuzüglich Zeitzuschlag ausnahmsweise am Ende des Folgequartals vergütet werden. Zuständig für die Vergütung von Überstunden ist die Departementsleitung des Departements Human Resources.\nEine Vergütung kann nur für den Teil der Überstunden gewährt werden, der die wöchentliche Sollarbeitszeit übersteigt.\nEine Auszahlung ist nur unter Einhaltung des Budgets möglich.\nDer Auszahlungsantrag wird auf dem HR Portal mittels E-Formular \"Auszahlungsantrag Arbeitszeit/Überstunden\" durch die vorgesetzte Stelle ausgefüllt. Der Bewilligungsprozess erfolgt über den Workflow (vorgesetzte Stelle an Mitarbeiterin bzw. Mitarbeiter, danach an die Departementsleitung (Budgetverantwortung) und im Anschluss daran an HR Zeitmanagement).",
+        "metadata": {
+            "type": "Überstunden",
+            "tags": [
+                "Auszahlung",
+                "Überstunden",
+                "Zeitzuschlag",
+                "Vergütung",
+                "Arbeitszeit"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 6.1",
+        "title": "Definition",
+        "text": "Inkonvenienzen sind Lohnbestandteile und finanzielle Zulagen für Dienste, welche die Ärztinnen und Ärzte zusätzlich zu den üblichen Arbeitszeiten, d.h. nachts, an Wochenenden oder Feiertagen (ohne halbe Feiertage) leisten müssen. Die Inkonvenienzen werden über die Dienstplanung im Polypoint PEP und die Stempelung der Arbeitszeiten durch die Mitarbeitenden generiert. Für die Überprüfung der korrekten Erfassung ist die/der PEP-Verantwortliche der jeweiligen Klinik oder des jeweiligen Instituts verantwortlich.",
+        "metadata": {
+            "type": "Inkonvenienzen",
+            "tags": [
+                "Inkonvenienzen",
+                "Lohnbestandteile",
+                "Zulagen",
+                "Dienste",
+                "Arbeitszeiten"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 6.2",
+        "title": "Inkonvenienzen für AA und OA i.V. ohne Facharzttitel sowie AA mit Facharzttitel",
+        "text": "Für Pikett-, Nacht- und Sonntags-/Feiertagsdienste werden pauschale Inkonvenienzentschädigungen vergütet.\n\n| Dienst | Ansatz in CHF | Zeitbonus | Präzisierung |\n| --- | --- | --- | --- |\n| Dauernde oder regelmässig wiederkehrende Nachtarbeit | 92.25 | + 10 % Zeitbonus | Triemli ausser DCH: 24:00 – 07.00 = 42 Min. Waid und DCH: 23:00 – 06:00 Uhr = 42 Min. |\n| Spätdienst bei Arbeitszeit bis nach 23 oder 24 Uhr | 92.25 | + 10 % Zeitbonus | Triemli ausser DCH: 24:00 – Dienstende Waid und DCH: 23:00 – Dienstende |\n| Tagesarbeit an Sonntagen und Feiertagen (pro Dienst) | 82.– | - | - |\n| Pikettarbeit mit keinem oder Arbeitseinsatz bis 5 Std. | 41.– | - | - |\n| Pikettarbeit mit Arbeitseinsatz über 5 Std. | 82.– | - | - |",
+        "metadata": {
+            "type": "Inkonvenienzen",
+            "tags": [
+                "Pikett",
+                "Nachtarbeit",
+                "Sonntagsarbeit",
+                "Feiertagsarbeit",
+                "Entschädigungen"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 6.3",
+        "title": "Inkonvenienzen für OA i.V. mit Facharzttitel",
+        "text": "| Dienst | Ansatz in CHF |\n| --- | --- |\n| Spätdienst nach 24 Uhr | 120.– |\n| Nachtdienst bis 12 Std. | 120.– |\n| Nachtdienst über 12 Std. | 156.– |\n| Samstags-, Sonntags- und Feiertagsdienst | 120.– |\n| Visiten Dienste an Samstag, Sonntag und Feiertagen bis 5 Std. | 60.– |\n| Visiten Dienste an Samstag, Sonntag und Feiertagen über 5 Std. | 120.– |\n| Pikett/Hintergrunddienst ohne Arbeitseinsatz (Werktage/Wochenende/Feiertage) | 48.– |\n| Pikett/Hintergrunddienst mit Arbeitseinsatz bis 4 Std. (Werktage/Wochenende/Feiertage) | 84.– |\n| Pikett/Hintergrunddienst mit Arbeitseinsatz über 4 Std. (Werktage/Wochenende/Feiertage) | 120.– |",
+        "metadata": {
+            "type": "Inkonvenienzen",
+            "tags": [
+                "Pikett",
+                "Nachtarbeit",
+                "Sonntagsarbeit",
+                "Feiertagsarbeit",
+                "Entschädigungen"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 7.1",
+        "title": "Abrechnung bei Austritt AA und OA i. V. ohne Facharzttitel",
+        "text": "Nach Eingang einer Kündigung sind der Bezug von Restferientagen sowie der Bezug von Zeitsaldi zu planen. Ist ein vollständiger Bezug aus betrieblichen Gründen nicht möglich, wird das verbleibende Zeitguthaben bei Austritt ausgezahlt. Negative Ferienguthaben werden verrechnet, ein negativer Arbeitszeitsaldo hingegen wird nicht verrechnet.\nEtwaige Unstimmigkeiten hinsichtlich der Dienstplanung müssen vor Austritt mit der vorgesetzten Stelle geklärt werden. Diese informiert bei Bedarf HR Zeitmanagement (zeitmanagement@stadtspital.ch).",
+        "metadata": {
+            "type": "Abrechnung",
+            "tags": [
+                "Abrechnung",
+                "Austritt",
+                "Restferientage",
+                "Zeitsaldi",
+                "Zeitguthaben"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 7.2",
+        "title": "Abrechnung bei Austritt AA und OA i. V. mit Facharzttitel",
+        "text": "Besteht am Ende des Arbeitsverhältnisses ein positiver Arbeitszeit- resp. Überstundensaldo, erfolgt eine Auszahlung derjenigen Stunden, welche die wöchentliche Sollarbeitszeit übersteigen. Die restlichen Stunden des Arbeitszeit- resp. Überstundensaldos verfallen.\nFerienguthaben wird ebenfalls ausgezahlt.\nBestehen am Ende des Arbeitsverhältnisses negative Saldi (Ferien, Arbeitszeit und Überstunden), erfolgt beim Austritt ein entsprechender Lohnabzug.\nEtwaige Unstimmigkeiten hinsichtlich der Dienstplanung müssen vor Austritt mit der vorgesetzten Stelle geklärt werden. Diese informiert bei Bedarf HR Zeitmanagement (zeitmanagement@stadtspital.ch).",
+        "metadata": {
+            "type": "Abrechnung",
+            "tags": [
+                "Abrechnung",
+                "Austritt",
+                "Arbeitszeitsaldo",
+                "Überstundensaldo",
+                "Ferienguthaben"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 8",
+        "title": "Inkrafttreten",
+        "text": "Diese Regelung tritt per 1. Januar 2023 in Kraft und ersetzt alle bisherigen Regelungen zu den besonderen Anstellungsbedingungen der Assistenzärztinnen und -ärzte sowie Oberärztinnen und -ärzte i.V. mit und ohne Facharzttitel.",
+        "metadata": {
+            "type": "Inkrafttreten",
+            "tags": [
+                "Inkrafttreten",
+                "Regelung",
+                "Anstellungsbedingungen",
+                "Assistenzärztinnen",
+                "Oberärztinnen"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "AA_GSP"
+        }
+    }
+]

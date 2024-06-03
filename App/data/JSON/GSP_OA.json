@@ -1,0 +1,223 @@
+[
+    {
+        "article_number": "Art. 1",
+        "title": "Geltungsbereich (Art. 1 Abs. 2 lit. c KAV)",
+        "text": "Die Weisung gilt für:\n- Oberärztinnen und Oberärzte mit Facharzttitel im eingesetzten Fachgebiet;\n- Oberärztinnen und Oberärzte m.e.V.\nDie Weisung gilt nicht für:\n- Oberärztinnen und Oberärzte i.V. mit und ohne Facharzttitel;\n- Oberärztinnen und Oberärzte in Verwaltungs- oder anderen nichtärztlichen Funktionen;\n- Spitalärztinnen und Spitalärzte.",
+        "metadata": {
+            "type": "Geltungsbereich",
+            "tags": [
+                "Oberärztinnen",
+                "Oberärzte",
+                "Facharzttitel",
+                "Weisung",
+                "Geltungsbereich"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "OA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 2",
+        "title": "Rechtsgrundlagen (Art. 2 Abs. 1 KAV)",
+        "text": "Die vorliegende Gesamtspitalweisung basiert auf der KAV sowie den AB KAV. Soweit KAV und AB KAV keine abweichende Regelung vorsehen, kommen die Verordnung über das Arbeitsverhältnis des städtischen Personals (Personalrecht, PR) sowie die Ausführungsbestimmungen dazu (AB PR) und die weiteren städtischen Erlasse zur Anwendung (z.B. Pikettreglement oder Bildungsreglement etc.; vgl. auch Gesamtspitalweisung GSP.ORG.065, \"Arbeitszeitreglement Stadtspital Zürich\").\nDiese Weisung ersetzt die Gesamtspitalweisung GSP.ORG.082, \"OAR – Reglement über die Anstellungsverhältnisse von Oberärztinnen und Oberärzten\", da das OAR per 31. Dezember 2022 ausser Kraft gesetzt wurde.",
+        "metadata": {
+            "type": "Rechtsgrundlagen",
+            "tags": [
+                "Gesamtspitalweisung",
+                "KAV",
+                "Personalrecht",
+                "Pikettreglement",
+                "Bildungsreglement"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "OA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 3.1",
+        "title": "Sollarbeitszeit und Höchstarbeitszeit (Art. 21 AB KAV)",
+        "text": "Die Sollarbeitszeit für Oberärztinnen und Oberärzte beträgt 50 Stunden pro Woche.\nDie Höchstarbeitszeit für Oberärztinnen und Oberärzte beträgt im Quartalsdurchschnitt 55 Stunden pro Woche.",
+        "metadata": {
+            "type": "Arbeitszeit",
+            "tags": [
+                "Sollarbeitszeit",
+                "Höchstarbeitszeit",
+                "Oberärztinnen",
+                "Oberärzte",
+                "Arbeitszeit"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "OA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 3.2",
+        "title": "Überstunden (Art. 22 ff. AB KAV)",
+        "text": "Als Überstunden gilt Arbeitszeit, die bei zeitlicher Dringlichkeit oder ausserordentlicher Geschäftslast geleistet wird und die quartalsweise Sollarbeitszeit übersteigt.\nAls Überstunden gilt auch Arbeitszeit, die während Piketteinsätzen und Hintergrunddienst (inklusive telefonische oder digitale Beratung) geleistet wird.\nDie Überstunden werden in einem separaten Zeitkonto geführt.\nDie geleisteten Stunden im Pikett-/Hintergrunddienst werden inkl. Zeitzuschlag automatisch auf das Überstundenkonto gebucht. Die anderen Überstunden werden vierteljährlich berechnet und auf das Überstundenkonto gebucht.\nEs liegt in der Führungsverantwortung der vorgesetzten Stelle und in der Eigenverantwortung der Mitarbeitenden, für einen Ausgleich des Arbeitszeitsaldos innerhalb des Quartals zu sorgen.\nÜberstunden sind im Folgequartal durch Freizeit zu kompensieren, wobei zur effektiven Dauer der geleisteten Überstunden ein Zeitzuschlag von 25 Prozent gewährt wird.\nIst eine Kompensation aus zwingenden betrieblichen Gründen nicht möglich, können die Überstunden zuzüglich Zeitzuschlag ausnahmsweise am Ende des Folgequartals vergütet werden. Zuständig für die Vergütung von Überstunden sind die Spitaldirektorin bzw. der Spitaldirektor (ab Funktionsstufe 14) oder die Departementsleitung des Departements Human Resources.\nEine Vergütung kann nur für den Teil der Überstunden gewährt werden, der die wöchentliche Sollarbeitszeit übersteigt.\nEine Auszahlung ist nur unter Einhaltung des Budgets möglich.\nDer Auszahlungsantrag wird auf dem HR Portal mittels E-Formular \"Auszahlungsantrag Arbeitszeit/Überstunden\" durch die vorgesetzte Stelle ausgefüllt. Der Bewilligungsprozess erfolgt über den Workflow (vorgesetzte Stelle an Mitarbeiterin bzw. Mitarbeiter, danach an die Departementsleitung (Budgetverantwortung) und im Anschluss daran an HR Zeitmanagement).",
+        "metadata": {
+            "type": "Arbeitszeit",
+            "tags": [
+                "Überstunden",
+                "Arbeitszeit",
+                "Piketteinsätze",
+                "Hintergrunddienst",
+                "Vergütung"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "OA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 3.3",
+        "title": "Arbeitszeitsaldo (Art. 25 AB KAV)",
+        "text": "Die Stunden, die von der Sollarbeitszeit abweichen und nicht Überstunden darstellen, bilden den Arbeitszeitsaldo.\nDie geleistete Arbeitszeit wird als Arbeitszeitsaldo (im Polypoint PEP „GLAZ“ genannt) gebucht. Der Arbeitszeitsaldo erhöht/vermindert sich, wenn die Sollarbeitszeit über- oder unterschritten wird.\nDer Ausgleich eines positiven Arbeitszeitsaldos hat so rasch als betrieblich möglich zu erfolgen. Es liegt in der Führungsverantwortung der vorgesetzten Stelle und in der Eigenverantwortung der Mitarbeitenden, für den raschen Ausgleich des Arbeitszeitsaldos zu sorgen.",
+        "metadata": {
+            "type": "Arbeitszeit",
+            "tags": [
+                "Arbeitszeitsaldo",
+                "Sollarbeitszeit",
+                "Überstunden",
+                "Arbeitszeit",
+                "Polypoint PEP"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "OA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 3.4",
+        "title": "Präsenzzeit (Art. 26 AB KAV)",
+        "text": "Die Anzahl geplanter Tagdienste darf zwölf aufeinanderfolgende Dienste nicht überschreiten.\nDie Anzahl geplanter Spät-/Nachtdienste (mit Endzeit ab 20.00 Uhr bis und mit 09.00 Uhr) darf sieben aufeinanderfolgende Dienste nicht überschreiten.\nDie maximale Anwesenheit im Betrieb darf 14 Stunden nicht überschreiten.\nAbweichungen sind nur in Notsituationen möglich. Eine Notsituation liegt namentlich vor, wenn die Dauer des Einsatzes nicht absehbar oder unerwartet länger ist und kein Kollege / keine Kollegin den Fall übernehmen kann. Die vorgesetzte Stelle entscheidet nach pflichtgemässem Ermessen, ob eine Notsituation vorliegt.",
+        "metadata": {
+            "type": "Arbeitszeit",
+            "tags": [
+                "Präsenzzeit",
+                "Tagdienste",
+                "Nachtdienste",
+                "Anerkennung",
+                "Notsituationen"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "OA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 3.5",
+        "title": "Ruhezeit (Art. 27 AB KAV)",
+        "text": "Im Anschluss an einen geplanten Präsenzdienst ist eine zusammenhängende Ruhezeit von mindestens zehn Stunden zu gewähren. Von dieser Regelung kann bei Einsätzen abgewichen werden, die im Rahmen von Pikett- oder Hintergrunddiensten geleistet werden und zwei Stunden nicht übersteigen. Das bedeutet gleichzeitig, dass Pikett- und Hintergrunddienste, bei denen es nicht zu einem Einsatz kommt, die Ruhezeit nicht unterbrechen.\nIm Interesse der Gesundheit der Mitarbeitenden einerseits und der Sicherheit der Patientinnen und Patienten andererseits sind lediglich in Ausnahmesituationen längere Pikett- und Hintergrundeinsätze möglich, ohne dass die minimale Ruhezeit eingehalten werden muss. Die vorgesetzte Stelle entscheidet nach pflichtgemässem Ermessen, ob eine Ausnahmesituation vorliegt.",
+        "metadata": {
+            "type": "Arbeitszeit",
+            "tags": [
+                "Ruhezeit",
+                "Präsenzdienst",
+                "Pikettdienst",
+                "Hintergrunddienst",
+                "Gesundheit"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "OA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 3.6",
+        "title": "Arbeitsfreie Tage (Art. 28 AB KAV)",
+        "text": "Es besteht Anspruch auf mindestens ein arbeitsfreies Wochenende pro Monat – d.h. frei von jeglicher Arbeitsverpflichtung, einschliesslich Pikett- oder Hintergrunddienst.\nIm Kalenderjahr müssen mindestens 20 arbeitsfreie Tage auf Sonn- und Feiertage fallen. Tage, an denen Pikett- oder Hintergrunddienst geleistet wird, gelten nicht als arbeitsfreie Tage.\nBei Abwesenheit infolge Krankheit, Unfall sowie bezahltem oder unbezahltem Urlaub wird der Anspruch auf arbeitsfreie Tage pro rata temporis gekürzt.",
+        "metadata": {
+            "type": "Arbeitszeit",
+            "tags": [
+                "Arbeitsfreie Tage",
+                "Wochenende",
+                "Pikettdienst",
+                "Hintergrunddienst",
+                "Urlaub"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "OA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 3.7",
+        "title": "Fort- und Weiterbildung (Art. 19 und Art. 20 AB KAV)",
+        "text": "Für die Fort- und Weiterbildung haben die Oberärztinnen und Oberärzte, unabhängig von der Anzahl ihrer Facharzttitel Anspruch auf jährlich zehn Arbeitstage, die als Arbeitszeit angerechnet werden.\nBei Teilzeitmitarbeitenden besteht der Anspruch entsprechend dem Beschäftigungsgrad.\nBei einer Abwesenheit infolge Krankheit, Unfall sowie bezahltem oder unbezahltem Urlaub von mehr als 120 Tagen wird der Anspruch anteilsmässig gekürzt.\nZusammenhängende Abwesenheiten über den Jahreswechsel werden zusammengezählt und anteilsmässig gekürzt, wenn im ersten Jahr 120 Tage nicht erreicht sind.\nAn Wochenenden besuchte Fortbildungen gelten nicht als Fortbildung an Arbeitstagen und berechtigen nicht zur Anrechnung von Arbeitszeit.",
+        "metadata": {
+            "type": "Fortbildung",
+            "tags": [
+                "Fortbildung",
+                "Weiterbildung",
+                "Arbeitstage",
+                "Teilzeitmitarbeitende",
+                "Urlaub"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "OA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 3.8",
+        "title": "Pikett- und Hintergrunddienst (Art. 29 AB KAV)",
+        "text": "Pikettdienst liegt vor, wenn die Oberärztin bzw. der Oberarzt nicht in einem ordentlichen Tag-, Spät- oder Nachtdienst eingeteilt ist und die Oberärztin oder der Oberarzt sich ausserhalb des Arbeitsorts aufhalten kann, aber innerhalb von 30 bis 60 Minuten am Arbeitsort einsatzbereit sein muss. Die Bereitschaftsgrade sind in der Gesamtspitalweisung GSP.ORG.086, \"Reglement Bereitschaftsdienst\" definiert.\nHintergrunddienst liegt vor, wenn die Oberärztin bzw. der Oberarzt nicht in einem ordentlichen Tag-, Spät- oder Nachtdienst eingeteilt ist und die Oberärztin oder der Oberarzt sich ausserhalb des Arbeitsorts aufhalten kann, aber jederzeit telefonisch oder digital für die diensthabende Ärztin oder den diensthabenden Arzt erreichbar sein muss. Die Oberärztin bzw. der Oberarzt entscheidet selbst, ob sie oder er sich an den Arbeitsort begeben muss.\nPikett- und Hintergrunddienste sind auf das betrieblich Notwendige zu beschränken.\nDie zu vergütende Arbeitszeit bemisst sich nach der effektiv geleisteten Zeitdauer. Die Anrechnung der Zeit für den Arbeitsweg richtet sich nach dem Reglement über die Vergütung und Organisation des städtischen Bereitschaftsdienstes (Pikettreglement, AS 177.170). Für den Arbeitsweg (Hin- und Rückweg) bei einem effektiven Piketteinsatz werden abhängig vom Wohnort pauschal 30, 45 oder 60 Minuten vergütet. Ausschlaggebend ist die Zeit mit dem Auto vom Wohnort bis zum Stadtspital Zürich gemäss Online-Kartendienst Google Maps. Dabei wird die verkehrsunabhängige Wegzeit berechnet (vgl. Gesamtspitalweisung GSP.ORG.086, \"Reglement Bereitschaftsdienst\").\nBei durchgehendem Pikett- und Hintergrunddienst während sieben Tagen besteht Anspruch auf eine Zeitgutschrift von fünf Stunden auf dem Arbeitszeitsaldo. Dieser wird nicht auf die Höchstarbeitszeit angerechnet.",
+        "metadata": {
+            "type": "Arbeitszeit",
+            "tags": [
+                "Pikett",
+                "Hintergrunddienst",
+                "Bereitschaftsdienst",
+                "Arbeitszeit",
+                "Zeitgutschrift"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "OA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 4.1",
+        "title": "Zeitzuschlag für Nachtdienst (Art. 31 AB KAV und Art. 164 AB PR)",
+        "text": "Oberärztinnen und Oberärzte, die Nachtdienst leisten, haben Anspruch auf einen Zeitzuschlag von zehn Prozent auf die während der Nacht geleisteten Stunden. Dieser wird nicht der Höchstarbeitszeit angerechnet.\nDer Nachtdienst muss mindestens acht Stunden dauern und die Zeit von 24.00 Uhr bis 04.00 Uhr einschliessen. Massgebend für die Berechnung des Anspruchs ist die zwischen 20.00 Uhr und 08.00 Uhr tatsächlich geleistete Arbeitszeit (Art. 164 Abs. 2 AB PR).\nDie Kompensation des Zeitzuschlags ist nach folgenden Grundsätzen zu gestalten (Art. 164 Abs. 4 AB PR):\n- Der Bezug der zusätzlichen Freizeit hat möglichst unmittelbar nach dem Nachtdienst zu erfolgen;\n- die Kompensation darf nicht in Form zusätzlicher Ferien bezogen werden, sondern soll der möglichst unmittelbaren Erholung nach dem Nachtdienst dienen;\n- bei Dauernachtarbeit soll die Kompensation in Form von zusätzlichen Freitagen zwischen zwei Nachtarbeitsperioden gewährt werden;\n- bei Teilzeitangestellten im Stundenlohn wird die Kompensationszeit monatlich errechnet und ausbezahlt;\n- die finanzielle Abgeltung der Kompensationszeit ist nur bei Teilzeitangestellten im Stundenlohn und bei Beendigung des Arbeitsverhältnisses zulässig.",
+        "metadata": {
+            "type": "Entschädigungen",
+            "tags": [
+                "Zeitzuschlag",
+                "Nachtdienst",
+                "Arbeitszeit",
+                "Kompensation",
+                "Erholung"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "OA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 4.2",
+        "title": "Inkonvenienzentschädigung (Art. 32 AB KAV)",
+        "text": "Oberärztinnen und Oberärzte haben Anspruch auf Inkonvenienzentschädigungen für Nacht-, Wochenend-, Pikett- und Hintergrunddienste gemäss folgender Tabelle:\n\n| Dienst | Ansatz in CHF |\n| --- | --- |\n| Nachtdienst bis 12 Std. | 120.– |\n| Nachtdienst über 12 Std. bis weniger als 14 Std. | 156.– |\n| Samstagsdienst | 120.– |\n| Sonntags-/Feiertagsdienst | 120.– |\n| Pikett-/Hintergrunddienst werktags ohne Arbeitseinsatz | 48.– |\n| Pikett-/Hintergrunddienst werktags mit Arbeitseinsatz bis 4 Std. | 84.– |\n| Pikett-/Hintergrunddienst werktags mit Arbeitseinsatz von mehr als 4 Std. | 120.– |\n| Pikett-/Hintergrunddienst Wochenende/Feiertage ohne Arbeitseinsatz | 48.– |\n| Pikett-/Hintergrunddienst Wochenende/Feiertage mit Arbeitseinsatz bis 4 Std. | 84.– |\n| Pikett-/Hintergrunddienst Wochenende/Feiertage mit Arbeitseinsatz von mehr als 4 Std. | 120.– |\n\nInkonvenienzentschädigungen werden monatlich vergütet.",
+        "metadata": {
+            "type": "Entschädigungen",
+            "tags": [
+                "Inkonvenienzentschädigung",
+                "Nachtarbeit",
+                "Wochenendarbeit",
+                "Pikett",
+                "Hintergrunddienst"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "OA_GSP"
+        }
+    },
+    {
+        "article_number": "Art. 5",
+        "title": "Inkrafttreten",
+        "text": "Diese Gesamtspitalweisung tritt per 1. Januar 2023 in Kraft und ersetzt die Gesamtspitalweisung GSP.ORG.082, \"OAR – Reglement über die Anstellungsverhältnisse von Oberärztinnen und Oberärzten\".",
+        "metadata": {
+            "type": "Inkrafttreten",
+            "tags": [
+                "Inkrafttreten",
+                "Gesamtspitalweisung",
+                "Oberärztinnen",
+                "Oberärzte",
+                "Anstellungsverhältnisse"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "OA_GSP"
+        }
+    }
+]

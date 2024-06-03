@@ -1,0 +1,111 @@
+[
+    {
+        "article_number": "Art. 1",
+        "title": "Rechtsgrundlagen",
+        "text": "Art. 68 Personalrecht (PR)\nArt. 161 Ausführungsbestimmungen zum Personalrecht (AB PR)\nArt. 15 Arbeitsgesetz (ArG)",
+        "metadata": {
+            "type": "General",
+            "tags": [
+                "Rechtsgrundlagen"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "PReg"
+        }
+    },
+    {
+        "article_number": "Art. 2",
+        "title": "Allgemeines",
+        "text": "Pausen dienen der Erholung und können damit zur Erhaltung der Gesundheit der Mitarbeitenden beitragen. Als Arbeitgeberin ist das Stadtspital verpflichtet, die Gesundheit der Mitarbeitenden zu wahren. Die Arbeitsorganisation ist deshalb nach Möglichkeit so zu gestalten, dass die Mitarbeitenden eine Pause beziehen können.",
+        "metadata": {
+            "type": "General",
+            "tags": [
+                "Allgemeines"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "PReg"
+        }
+    },
+    {
+        "article_number": "Art. 3",
+        "title": "Pausenregelung",
+        "text": "Bei einer Tagesarbeitszeit von mehr als sechs Stunden muss die Arbeit zwingend durch eine unbezahlte Pause von mindestens 30 Minuten unterbrochen werden, unabhängig davon, ob eine Mahlzeit eingenommen wird oder nicht. Die Abteilungen sind berechtigt, längere Pausen zu definieren. Soweit es betrieblich möglich ist, wird pro Halbtag eine bezahlte Pause von 15 Minuten gewährt. Ein Halbtag besteht aus mindestens drei Arbeitsstunden. Nachbezug, Verrechnung mit der Verpflegungspause oder Verkürzung der Dienst- resp. Arbeitszeit am Anfang oder Ende des Arbeitseinsatzes ist nicht möglich. Dauern die Kurzpausen länger als 15 Minuten oder werden mehr Pausen gemacht, müssen diese gestempelt werden.",
+        "metadata": {
+            "type": "General",
+            "tags": [
+                "Pausenregelung"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "PReg"
+        }
+    },
+    {
+        "article_number": "Art. 3.1",
+        "title": "Pausenregelung für Assistenzärztinnen und -ärzte",
+        "text": "Assistenzärztinnen und -ärzte unterstehen dem Arbeitsgesetz (ArG). Für sie gilt die folgende Pausenregelung:\n− Bei Diensten von mindestens 5.5 Stunden muss die 15-minütige, bezahlte Kurzpause pro Halbtag zwingend bezogen werden.\n− Bei Diensten ab 7 Stunden muss die 15-minütige, bezahlte Kurzpause zwingend zweimal bezogen werden.\n− Bei Diensten ab 9 Stunden ist zusätzlich zu den zwei bezahlten 15-minütigen Kurzpausen eine unbezahlte Pause von mindestens 30 Minuten zu beziehen. Beginn und Ende der Pause sind im Polypoint PEP zu erfassen. Im Polypoint PEP werden grundsätzlich bei allen Diensten von mehr als sechs Stunden automatisch 30 Minuten unbezahlte Pause abgezogen, sofern keine oder eine zu kurze Stempelung erfolgt.",
+        "metadata": {
+            "type": "General",
+            "tags": [
+                "Pausenregelung",
+                "Assistenzärztinnen",
+                "Assistenzärzte"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "PReg"
+        }
+    },
+    {
+        "article_number": "Art. 3.2",
+        "title": "Verfügbarkeit während der Pause",
+        "text": "Der/die Mitarbeitende muss in der Zeit der Pause nicht für Arbeiten zur Verfügung stehen. Die Vorgesetzten haben die Arbeitsabläufe so zu organisieren, dass ein Pausenbezug für die Mitarbeitenden möglich ist. Für den Pausenbezug gelten jedoch nicht die gleichen Anforderungen wie für den Bezug von Freizeit und es müssen nicht die gleichen Gestaltungsmöglichkeiten gegeben sein. So ist es für den Pausenbezug z.B. nicht notwendig, dass das Gebäude verlassen werden kann. Ist ein Pausenbezug ausnahmsweise nicht möglich und kann die Pause nicht nachgeholt werden, ist die automatisch generierte Pause im Polypoint PEP zu löschen. Eine Verkürzung der Dienst- resp. Arbeitszeit durch den Bezug der Verpflegungspause am Anfang oder Ende des Arbeitseinsatzes ist nicht möglich.",
+        "metadata": {
+            "type": "General",
+            "tags": [
+                "Pausenregelung",
+                "Verfügbarkeit"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "PReg"
+        }
+    },
+    {
+        "article_number": "Art. 3.3",
+        "title": "Verpflegungspause als Arbeitszeit",
+        "text": "Ausnahmsweise gilt die Verpflegungspause als Arbeitszeit, sofern eine der folgenden Voraussetzungen gegeben ist:\na) der Arbeitsplatz kann nicht verlassen werden oder\nb) die oder der Mitarbeitende muss während der Pause zwingend erreichbar und abrufbar sein. Diese Voraussetzungen müssen somit kumulativ gegeben sein. Dies kann z.B. der Fall sein, wenn Mitarbeitende alleine in einem Dienst sind und nicht für eine Pause durch eine andere Mitarbeiterin oder einen anderen Mitarbeiter vertreten werden können. Als Arbeitsplatz gilt jeder Ort, der der oder dem Mitarbeitenden zur Verrichtung seiner Arbeit zugewiesen wurde.",
+        "metadata": {
+            "type": "General",
+            "tags": [
+                "Pausenregelung",
+                "Verpflegungspause"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "PReg"
+        }
+    },
+    {
+        "article_number": "Art. 3.4",
+        "title": "Festlegung der bezahlten Pausen",
+        "text": "Die Spitalleitung legt auf begründetem Antrag der Departementsleitung fest, in welchen Diensten die Voraussetzungen für eine bezahlte Pause vollumfänglich gegeben sind. Die entsprechenden Dienste sind im Anhang aufgeführt. Im Fall von strukturellen oder räumlichen Änderungen ist die bestehende Pausenregelung zwingend zu überprüfen.",
+        "metadata": {
+            "type": "General",
+            "tags": [
+                "Pausenregelung",
+                "bezahlte Pause"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "PReg"
+        }
+    },
+    {
+        "article_number": "Art. 4",
+        "title": "Beispiele",
+        "text": "Pause gilt als Arbeitszeit:\n1. Eine Pflegefachperson ist allein auf der Station und kann ihre Funktion nicht an weitere Mitarbeitende abgeben (z. B. aufgrund fehlender Qualifikation).\n2. Zwei Mitarbeitende sind im Dienst. Die durchgehende Überwachung von Patient*innen muss gewährleistet sein. Gleichzeitig muss eine Fachkraft für Notfälle auf Abruf sein.\n3. Eine Assistenzärztin muss das Telefon zwingend in die Pause mitnehmen, da eine Übergabe an eine andere Fachperson unter keinen Umständen möglich ist.\n4. Zwei Mitarbeitende müssen dauerhaft vor Ort sein, um im Notfall einen Schockraum bedienen zu können.\n\nPause gilt nicht als Arbeitszeit:\n1. Ein Assistenzarzt ist alleine in einem Dienst, kann aber für eine Pause von einer Oberärztin vertreten werden.\n2. Ein Mitarbeiter nimmt freiwillig das Telefon mit in die Pause, um erreichbar zu sein.\n3. Die Pause kann aufgrund von Arbeitsanfall nicht wie geplant bezogen werden, kann aber im Laufe des Dienstes nachbezogen werden.\n4. Eine Mitarbeiterin hält sich in der Pause im Aufenthaltsraum auf, eine weitere ist im Dienst. In dem Raum befinden sich Überwachungsgeräte. Die Mitarbeiterin muss nicht reagieren, wenn das Gerät ein Alarmsignal sendet.",
+        "metadata": {
+            "type": "General",
+            "tags": [
+                "Beispiele"
+            ],
+            "created_at": "2024-05-21T11:00:00Z",
+            "Gesetzestext": "PReg"
+        }
+    }
+]
