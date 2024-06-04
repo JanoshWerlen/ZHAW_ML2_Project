@@ -21,10 +21,12 @@ client.api_key = os.getenv('OPENAI_API_KEY')
 model_large = "text-embedding-3-large"
 model_small = "text-embedding-3-small"
 
-index_path_ABPR = "data/ABPR/articles_large.index"
-json_path_ABPR = "data/ABPR/articles_large.json"
-index_path_ABPR_small = "data/ABPR/articles.index"
-json_path_ABPR_small = "data/ABPR/articles.json"
+index_path_ABPR = "data/JSON/articles_main.index"
+json_path_ABPR = "data/JSON/articles_main_embedded.json"
+#index_path_ABPR = "data/ABPR/articles_large.index"
+#json_path_ABPR = "data/ABPR/articles_large.json"
+#index_path_ABPR_small = "data/ABPR/articles.index"
+#json_path_ABPR_small = "data/ABPR/articles.json"
 
 index_path_ARG = "data/ARG/articles.index"
 json_path_ARG = "data/ARG/articles_embedded.json"
@@ -165,7 +167,7 @@ def check_rag_for_context(message, filter):
         return "", ""
 
     if filter == "ABPR":
-        json_file = Path('data/ABPR/articles_large.json')
+        json_file = Path('data/JSON/articles_main_embedded.json')
     elif filter =="KAR":
         json_file = Path('data/KAR/articles_embedded.json')
     elif filter =="ARG":
