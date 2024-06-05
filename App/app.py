@@ -5,9 +5,10 @@ import openai
 import faiss
 import os
 from dotenv import load_dotenv
-from flask import Flask, request, jsonify, render_template, g
-from database import *
-from getpass import getpass
+from flask import Flask, request, jsonify, render_template, g, redirect, url_for, session
+from functools import wraps
+from database import app, login_required, get_db, setup_database
+
 
 # Configure OpenAI API key
 client = openai.OpenAI()
@@ -34,12 +35,11 @@ json_path_KAR = "data/KAR/articles_embedded.json"
 
 
 # Database setup
-c, conn = setup_database()
+setup_database()
 
 inquired_infos = []
 times_inquired = 0
 
-# Load JSON file
 def load_json(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         return json.load(file)
@@ -128,9 +128,9 @@ def check_rag_for_context(message, filter):
     if filter == "ABPR":
         json_file = Path('data/JSON/articles_main_embedded.json')
     elif filter =="KAR":
-        json_file = Path('data/KAR/articles_embedded.json')
+        json_file = Path('data/KAR/KAR.json')
     elif filter =="ARG":
-        json_file = Path('data/ARG/articles.json')    
+        json_file = Path('data/ARG/articles_embedded.json')    
 
     with open(json_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -154,7 +154,7 @@ def perform_rag_request(message, filter_values, additional_context=""):
     response_string, filtered_articles = check_rag_for_context(response_string, filter)
 
     system_query = f"""Du bist ein HR-Assistent des Stadtspitals Zürich, welcher Fragen von Angestellten beantwortet. Antworte basierend auf den Inhalten in den folgenden Artikeln: <Artikelinhalt>{response_string}</artikelinhalt> und nur wenn die Inhalte relevant zur Frage sind.
-    Antworte professionell und kurz ohne Begrüssung oder Verabschiedung. Verwende direkte Zitate aus den Artikeln und setze diese in Anführungszeichen. Formatiere deine Antwort, dass diese gut lesbar ist und unterteile die Inhalte in Abschnitte. Gib am Ende eine Liste aller relevanten Artikel und Artikeltitel an. Bei Fragen welche überhaupt nichts mit der Arbeit zutun haben, lenke den User zurück zum Thema. """
+    Antworte professionell und kurz ohne Begrüssung oder Verabschiedung. Verwende direkte Zitate aus den Artikeln und setze diese in Anführungszeichen. Formatiere deine Antwort, dass diese gut lesbar ist und unterteile die Inhalte in Abschnitte. Gib am Ende eine Liste aller relevanten Artikel und Artikeltitel an. Bei Fragen welche überhaupt nichts mit der Arbeit zutun haben, lenke den User zurück zum Thema. Nutze maximal ca. 1000 Tokens """
 
     response = client.chat.completions.create(
         model="gpt-4o",
@@ -169,13 +169,13 @@ def perform_rag_request(message, filter_values, additional_context=""):
 def inquire_more_information(message):
     global times_inquired
     times_inquired += 1
-    system_query = f"Frage genauer nach, was der User wissen will um die originale Anfrage '{message}' zu präzisieren. Akzeptiere nur personalrechtliche Fragen welche um in deiner Rolle als HR-Berater am Stadtspital Zürich relevant sind. Geh davon aus, dass der User immer ein Angestellter des Stadtspitals Zürich ist."
+    system_query = f"Frage genauer nach, was der User wissen will um die originale Anfrage '{message}' zu präzisieren. Akzeptiere nur personalrechtliche Fragen welche um in deiner Rolle als HR-Berater am Stadtspital Zürich relevant sind. Geh davon aus, dass der User immer ein Angestellter des Stadtspitals Zürich ist. Dies in maximal 100 Tokens"
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": f"{system_query}"},
         ],
-        max_tokens=100,
+        max_tokens=200,
         stop=['\n']
     )
     response = response.choices[0].message.content
@@ -210,59 +210,46 @@ def decide_action(message, type):
             if action:
                 return action, message
 
-def initiate_conversation(user_message, filter_values):
-    
-    action, message = decide_action(user_message, type=1)
+def initiate_conversation(user_message, filter_values, state, user_id):
+    db = get_db()
 
+    if state == 1:    
+        action, message = decide_action(user_message, type=1)
+        articles = ""
 
-    if action == "perform_rag_request":
-        response, articles = perform_rag_request(user_message, filter_values, additional_context="")
-    elif times_inquired >= 3:
-        response = "The conversation has been ended due to the nature of the inquiry."
-    elif action == "inquire_more_information":
-        response = inquire_more_information(user_message)
-    elif action == "end_conversation":
-        response = "Thank you for your message. The conversation has been ended due to the nature of the inquiry."
+        if action == "perform_rag_request":
+            response, articles = perform_rag_request(user_message, filter_values, additional_context="")
+        elif times_inquired >= 3:
+            response = "The conversation has been ended due to the nature of the inquiry."
+        elif action == "inquire_more_information":
+            response = inquire_more_information(user_message)
+        elif action == "end_conversation":
+            response = "Thank you for your message. The conversation has been ended due to the nature of the inquiry."
+       
 
-    return response
+            
+        db.execute("INSERT INTO logs (user_id, message, response, articles, action) VALUES (?, ?, ?, ?, ?)",
+                            (user_id, user_message, response, articles, action))
+        db.commit()  
+        return response
 
-app = Flask(__name__)
 
 @app.route('/')
+@login_required
 def index():
-    return render_template('index.html')
+    user_id = session.get('user_id')
+    return render_template('index.html', user_id=user_id)
 
 @app.route('/chat', methods=['POST'])
+@login_required
 def chat():
+    user_id = session.get('user_id')
     data = request.json
     user_message = data.get("message")
     filter_values = data.get("filter_values")
-    response = initiate_conversation(user_message, filter_values)
+    response = initiate_conversation(user_message, filter_values, state=1, user_id=user_id)
     return jsonify({"response": response})
 
-
-@app.route('/login', methods=['POST'])
-def login_user():
-    data = request.json
-    username = data.get("username")
-    password = data.get("password")
-    user_id = login(username, password, c)
-    if user_id:
-        return jsonify({"user_id": user_id})
-    else:
-        return jsonify({"error": "Invalid credentials"}), 401
-
-@app.route('/register', methods=['POST'])
-def register_user():
-    data = request.json
-    username = data.get("username")
-    password = data.get("password")
-    register(username, password, c, conn)
-    user_id = login(username, password, c)
-    if user_id:
-        return jsonify({"user_id": user_id})
-    else:
-        return jsonify({"error": "Registration failed"}), 500
 
 if __name__ == "__main__":
     app.run(debug=True)

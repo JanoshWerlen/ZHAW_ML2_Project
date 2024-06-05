@@ -38,6 +38,7 @@
     </style>
 </head>
 
+
 <body class="bg-dark">
     <section>
         <div class="container py-5">
@@ -49,11 +50,19 @@
                         <div class="card-header d-flex justify-content-between align-items-center p-3 bg-secondary border-bottom-0"
                             style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
                             <a href="#" class="text-light" onclick="reset(event)"><i class="bi bi-arrow-repeat"></i></a>
-                            <p class="mb-0 fw-bold"><span class="me-2" id="display_type_name"></span><i
-                                    id="display_is_active" class="bi bi-volume-mute"></i></p>
-                            <a href="#" class="text-light" onclick="info(event)"><i class="bi bi-info-circle"></i></a>
+                            <p class="mb-0 fw-bold">
+                                <span class="me-2" id="display_type_name"></span>
+                                <span class="me-2">User: {{ user_id }}</span>
+                                <span class="form-label">Personalrecht Chatbot-V1</span>
+                            </p>
+                            <a href="/logout" class="text-light btn btn-danger">
+                                <i class="bi bi-box-arrow-right"></i> Logout
+                            </a>
+                            <a href="/change_password" class="text-light btn btn-warning">
+                                <i class="bi bi-key"></i> Change Password
+                            </a>
                         </div>
-                        <label class="form-label">Personalrecht Chatbot-V1</label>
+                      
                         <div class="card-body" id="messages">
                             <div class="messages-container">
                                 <!-- messages will appear here -->
@@ -74,8 +83,6 @@
                                     <label for="filter2">Assistenzärzte</label><br>
                                     <input type="radio" id="filter3" name="filter" value="KAR">
                                     <label for="filter3">Kaderärzte (OA.i.V. mit FA / OA / LA / CA)</label><br>
-                                    <input type="radio" id="filter4" name="filter" value="ALL">
-                                    <label for="filter4">Unklar / Keine Angabe</label><br>
                                 </div>
                             </div>
                         </div>
@@ -87,9 +94,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
-    <script>
-       
-    </script>
 </body>
 
 </html>

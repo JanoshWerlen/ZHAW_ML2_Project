@@ -150,6 +150,7 @@ function get_assistant_istyping_message() {
 function get_user_message(content) {
     return $("<div>").addClass("d-flex flex-row justify-content-end mb-4").append($("<div>").addClass("p-3 me-3 border border-secondary").attr("style", "border-radius: 15px;").append($("<p>").addClass("small mb-0").text(content)), $("<i>").addClass("bi bi-person-bounding-box").attr("style", "font-size: 2rem;"));
 }
+
 function user_says() {
     const userInput = document.getElementById('user_says_input').value;
     const userFilter = document.querySelector('input[name="filter"]:checked').value;
@@ -173,21 +174,42 @@ function user_says() {
         .then(response => response.json())
         .then(data => {
             stop_assistant_istyping_temp();
-
+    
+    
             const responseText = data.response;
-
+    
+            // Create a div for the bot's response
             const botMessageDiv = document.createElement('div');
             botMessageDiv.classList.add('message', 'bot-message');
-
+    
+            // Create a paragraph for the bot's response text
             const responseTextElement = document.createElement('p');
             responseTextElement.innerHTML = 'Bot: ' + responseText.replace(/\n/g, '<br>');
             botMessageDiv.appendChild(responseTextElement);
-
+    
+            // Add the bot's response to the messages container
             messagesContainer.appendChild(botMessageDiv);
             messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
         });
+    
 
     document.getElementById('user_says_input').value = '';
+
+}
+
+function validateForm() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    if (username.length > 8 || password.length > 8) {
+        alert('Username and password must be no more than 8 characters long.');
+        return false;
+    }
+    return true;
+}
+
+function logout(){
+    fetch('logout')
 }
 
 
