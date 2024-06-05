@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+import time
 import numpy as np
 import openai
 import faiss
@@ -36,8 +37,11 @@ inquired_infos = []
 times_inquired = 0
 
 def load_json(file_path):
-    with open(file_path, 'r', encoding='utf-8') as file:
-        return json.load(file)
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            return json.load(file)
+    finally:
+        print("file could not be loaded")        
 
 # Your other functions
 def get_embedding_large(text, tags, model=model_large):
@@ -114,11 +118,11 @@ def check_rag_for_context(message, filter):
         return "", ""
 
     if filter == "ABPR":
-        json_file = Path('data/JSON/articles_main_embedded.json')
+        json_file = Path('data/3_embedded/ABPR/ABPR_embedded.json')
     elif filter =="KAR":
-        json_file = Path('data/KAR/KAR.json')
+        json_file = Path('data/3_embedded/KAR/KAR_embedded.json')
     elif filter =="ARG":
-        json_file = Path('data/ARG/articles_embedded.json')    
+        json_file = Path('data/3_embedded/AA/AA_embedded.json')    
 
     with open(json_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -141,7 +145,7 @@ def perform_rag_request(message, filter_values, additional_context=""):
     response_string, filter = get_rag_string(combined_query, filter_values)
     response_string, filtered_articles = check_rag_for_context(response_string, filter)
 
-    system_query = f"""Du bist ein HR-Assistent des Stadtspitals Zürich, welcher Fragen von Angestellten beantwortet. Antworte basierend auf den Inhalten in den folgenden Artikeln: <Artikelinhalt>{response_string}</artikelinhalt> und nur wenn die Inhalte relevant zur Frage sind.
+    system_query = f"""Du bist ein HR-Assistent des Stadtspitals Zürich, welcher Fragen von Angestellten beantwortet. Antworte basierend auf den Inhalten in den folgenden Artikeln: <Artikelinhalt>{response_string}</artikelinhalt> und nur wenn die Inhalte relevant zur Frage sind. Äussere dich nur zur gestellten Frage.
     Antworte professionell und kurz ohne Begrüssung oder Verabschiedung. Verwende direkte Zitate aus den Artikeln und setze diese in Anführungszeichen. Formatiere deine Antwort, dass diese gut lesbar ist und unterteile die Inhalte in Abschnitte. Gib am Ende eine Liste aller relevanten Artikel und Artikeltitel an. Bei Fragen welche überhaupt nichts mit der Arbeit zutun haben, lenke den User zurück zum Thema. Nutze maximal ca. 1000 Tokens """
 
     response = client.chat.completions.create(
@@ -151,19 +155,22 @@ def perform_rag_request(message, filter_values, additional_context=""):
             {"role": "user", "content": f"{refind_query}"}
         ]
     )
+
+    total_tokens = response.usage.total_tokens
+
     response = response.choices[0].message.content
-    return response, filtered_articles
+    return response, filtered_articles, total_tokens
 
 def inquire_more_information(message):
     global times_inquired
     times_inquired += 1
-    system_query = f"Frage genauer nach, was der User wissen will um die originale Anfrage '{message}' zu präzisieren. Akzeptiere nur personalrechtliche Fragen welche um in deiner Rolle als HR-Berater am Stadtspital Zürich relevant sind. Geh davon aus, dass der User immer ein Angestellter des Stadtspitals Zürich ist. Dies in maximal 100 Tokens"
+    system_query = f"Prüfe ob die Frage '{message}' ausreicht, um Gesetztesartikel zu durchsuchen. Akzeptiere nur personalrechtliche Fragen welche als Mitarbeiter am Stadtspital Zürich relevant sind. Geh davon aus, dass der User immer ein Angestellter des Stadtspitals Zürich ist. Dies in maximal 50 Tokens. Wenn nein, Fordere den User auf, eine relevante Frage zu stellen."
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": f"{system_query}"},
         ],
-        max_tokens=200,
+        max_tokens=100,
         stop=['\n']
     )
     response = response.choices[0].message.content
@@ -171,7 +178,11 @@ def inquire_more_information(message):
 
 def decide_action(message, type):
     if type == 1:
-        prompt = f"Given the following user message, decide what action should be taken. The options are: perform_rag_request, inquire_more_information, end_conversation. If the User asks a relevant question regarding employment or similar, decide to 'perform_rag_request'. End the conversation if the Questions are mean, unprofessional or insulting.  \n\nUser message: {message}\n\nAction:"
+        prompt = f"""Given the following user message, decide the appropriate action to take. The options are:
+                        \nperform_rag_request: For questions related to employment or similar topics.
+                        \ninquire_more_information: If additional details are needed to provide a proper response.
+                        \nend_conversation: For messages that are mean, unprofessional, or insulting.
+                        \nCarefully evaluate the tone and content of the user message to determine the correct action. \n\nUser message: {message}\n\nAction:"""
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
@@ -203,23 +214,27 @@ def initiate_conversation(user_message, filter_values, state, user_id):
 
     if state == 1:    
         action, message = decide_action(user_message, type=1)
+        print("Action: " + action)
         articles = ""
 
         if action == "perform_rag_request":
-            response, articles = perform_rag_request(user_message, filter_values, additional_context="")
+            response, articles, total_tokens = perform_rag_request(user_message, filter_values, additional_context="")
         elif times_inquired >= 3:
             response = "The conversation has been ended due to the nature of the inquiry."
         elif action == "inquire_more_information":
             response = inquire_more_information(user_message)
         elif action == "end_conversation":
-            response = "Thank you for your message. The conversation has been ended due to the nature of the inquiry."
+            response = "Thank you for your message. The conversation has been ended due to the nature of the inquiry. You will be loged out in 5 seconds"
+            time.sleep(5)
+            session.pop('user_id', None)
        
 
-            
-        db.execute("INSERT INTO logs (user_id, message, response, articles, action) VALUES (?, ?, ?, ?, ?)",
-                            (user_id, user_message, response, articles, action))
-        db.commit()  
-        return response
+        try:    
+            db.execute("INSERT INTO logs (user_id, message, response, articles, action, rag_tokens_used) VALUES (?, ?, ?, ?, ?, ?)",
+                                (user_id, user_message, response, articles, action, total_tokens))
+            db.commit()  
+        finally:          
+            return response
 
 
 @app.route('/')

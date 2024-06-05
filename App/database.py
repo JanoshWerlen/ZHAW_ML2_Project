@@ -41,6 +41,7 @@ def setup_database():
                         action TEXT,
                         articles TEXT,
                         timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+                        rag_tokens_used INTEGER,
                         FOREIGN KEY(user_id) REFERENCES users(id))''')
         
         conn.commit()
