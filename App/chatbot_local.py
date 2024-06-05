@@ -2,55 +2,39 @@ import json
 from pathlib import Path
 import numpy as np
 import openai
-
-from getpass import getpass
-from openai import OpenAI
 import faiss
 import os
 from dotenv import load_dotenv
-
-from database import *
+from openai import OpenAI
 
 # Configure OpenAI API key
-client = OpenAI()
 load_dotenv()
+client = OpenAI()
 
-client.api_key = os.getenv('OPENAI_API_KEY')
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
-#Load Models
+# Load Models
 model_large = "text-embedding-3-large"
-model_small = "text-embedding-3-small"
 
-index_path_ABPR = "data/JSON/articles_main.index"
-json_path_ABPR = "data/JSON/articles_main_embedded.json"
-#index_path_ABPR = "data/ABPR/articles_large.index"
-#json_path_ABPR = "data/ABPR/articles_large.json"
-#index_path_ABPR_small = "data/ABPR/articles.index"
-#json_path_ABPR_small = "data/ABPR/articles.json"
+index_path_ABPR = "data/3_embedded/ABPR/ABPR_embedded.index"
+json_path_ABPR = "data/3_embedded/ABPR/ABPR_embedded.json"
 
-index_path_ARG = "data/ARG/articles.index"
-json_path_ARG = "data/ARG/articles_embedded.json"
+index_path_ARG = "data/3_embedded/AA/AA_embedded.index"
+json_path_ARG = "data/3_embedded/AA/AA_embedded.json"
 
-index_path_KAR = "data/KAR/articles.index"
-json_path_KAR = "data/KAR/articles_embedded.json"
-
-
-# Database setup
-c, conn = setup_database()
-
+index_path_KAR = "data/3_embedded/KAR/KAR_embedded.index"
+json_path_KAR = "data/3_embedded/KAR/KAR_embedded.json"
 
 inquired_infos = []
 times_inquired = 0
 
-
-#load JSON file
+# Load JSON file
 def load_json(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         return json.load(file)
 
-
 def bot_response(message):
-    print("\nBot: " )
+    print("\nBot: ")
     print(message)
 
 def get_user_input():
@@ -58,28 +42,19 @@ def get_user_input():
     message = input("\n> ")
     return message    
 
-#Get embeddings depending on model type
+# Get embeddings depending on model type
 def get_embedding_large(text, tags, model=model_large):
     text = text.replace("\n", " ")
     combine = text + " " .join(tags)
     return openai.embeddings.create(input=[combine], model=model).data[0].embedding
 
-def get_embedding_small(text, tags, model=model_small):
-    text = text.replace("\n", " ")
-    combine = text + " " .join(tags)
-    return openai.embeddings.create(input=[combine], model=model).data[0].embedding
-
-
 def generate_query_embedding(query, filtered_values):
     if filtered_values in ["ABPR", "KAR", "ARG"]:
         return get_embedding_large(query, [])
-    elif filtered_values == "ARG":
-        return get_embedding_small(query, [])
     else:
         raise ValueError("Invalid filtered_values provided")
-    
 
-#Get files depending on filter
+# Get files depending on filter
 def get_files(filter_values):
 
     if filter_values == "ABPR":
@@ -100,13 +75,12 @@ def get_files(filter_values):
 
     return index, data, context
 
-
 def refine_query(query):
     print("\nOriginales Query: " + query + "\n")
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": f"Erweitere die User Frage: <anfrage>{query}</anfrage>, mit Suchbegriffen, damit die Frage möglichst gute RAG ergebnisse liefert. Der erweiterte Anfrage soll ich immer auf den Kontext einer Anstellung am Stadtspital Zürich in der Schweiz beziehen. Alle Antworten sollen als Fragen formuliert sein"},
+            {"role": "system", "content": f"Erweitere die User Frage: <anfrage>{query}</anfrage>, mit Suchbegriffen, damit die Frage möglichst gute RAG ergebnisse liefert. Der erweiterte Anfrage soll sich immer auf den Kontext einer Anstellung am Stadtspital Zürich in der Schweiz beziehen. Alle Antworten sollen als Fragen formuliert sein"},
         ]
     )
     response = response.choices[0].message.content
@@ -114,14 +88,13 @@ def refine_query(query):
     print("\nimproved query: " + response + "\n")
     return response
 
-
-def get_rag_string(refind_query, filter_values):
+def get_rag_string(refined_query, filter_values):
     print("\nFinding relevant articles... \n")
-    index, data , context = get_files(filter_values)
-    refind_query =  refind_query + " betreffend " + context
+    index, data, context = get_files(filter_values)
+    refined_query = refined_query + " betreffend " + context
 
     query_embedding = np.array(generate_query_embedding(
-        refind_query, filter_values)).astype('float32').reshape(1, -1)
+        refined_query, filter_values)).astype('float32').reshape(1, -1)
 
     # Perform the search
     k = 5  # Number of nearest neighbors to retrieve
@@ -131,7 +104,6 @@ def get_rag_string(refind_query, filter_values):
 
     # Retrieve the matching articles
     matching_articles = [data[i]
-                         # Direct access by index
                          for i in indices if i < len(data)]
     response_string = ""
 
@@ -143,11 +115,10 @@ def get_rag_string(refind_query, filter_values):
     
     return response_string, filter_values
 
-
 def check_rag_for_context(message, filter):
     print(f"\n checking for context... \n")
 
-    system_query = f"Suche im folgenden text nach allen genannten Artikeln und retourniere ausschliesslich eine Liste im format ['Art. X', 'Art. Y>'] der gefunden Atrikel: <text> {message} </text>, Ignoriere Allen Text vor dem 'Art.' und alles nach der Zahl."
+    system_query = f"Suche im folgenden text nach allen genannten Artikeln und retourniere ausschliesslich eine Liste im format ['Art. X', 'Art. Y>'] der gefunden Artikel: <text> {message} </text>, Ignoriere Allen Text vor dem 'Art.' und alles nach der Zahl."
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
@@ -156,7 +127,7 @@ def check_rag_for_context(message, filter):
     )
     response = response.choices[0].message.content
 
-    print("\nGeefundene Artikel: ")
+    print("\nGefundene Artikel: ")
     response = response.strip().rstrip('>').replace('>','')
     print(response)
 
@@ -168,11 +139,11 @@ def check_rag_for_context(message, filter):
         return "", ""
 
     if filter == "ABPR":
-        json_file = Path('data/JSON/articles_main_embedded.json')
-    elif filter =="KAR":
-        json_file = Path('data/KAR/articles_embedded.json')
-    elif filter =="ARG":
-        json_file = Path('data/ARG/articles.json')    
+        json_file = Path('data/3_embedded/ABPR/ABPR_embedded.json')
+    elif filter == "KAR":
+        json_file = Path('data/3_embedded/KAR/KAR_embedded.json')
+    elif filter == "ARG":
+        json_file = Path('data/3_embedded/AA/AA_embedded.json')   
 
     with open(json_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -193,12 +164,11 @@ def check_rag_for_context(message, filter):
 
 def perform_rag_request_with_context(message, filter_values, additional_context=""):
     combined_query = f"{additional_context} {message}".strip()
-    refind_query = refine_query(combined_query)
+    refined_query = refine_query(combined_query)
 
-    print("\n performing RAG based on query: " + str(refind_query) + "\n")
+    print("\n performing RAG based on query: " + str(refined_query) + "\n")
 
     # Combine the refined query with additional context if provided
-   
     response_string, filter = get_rag_string(combined_query, filter_values)
 
     response_string, filtered_articles = check_rag_for_context(response_string, filter)
@@ -207,41 +177,36 @@ def perform_rag_request_with_context(message, filter_values, additional_context=
     Antworte professionell und kurz ohne Begrüssung oder Verabschiedung. Verwende direkte Zitate aus den Artikeln und setze diese in Anführungszeichen. Gib am Ende eine Liste aller relevanten Artikel und Artikeltitel an. Bei Fragen welche überhaupt nichts mit der Arbeit zutun haben, lenke den User zurück zum Thema. """
 
     response = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-4",
         messages=[
             {"role": "system", "content": f"{system_query}"},
-            {"role": "user", "content": f"{refind_query}"}
+            {"role": "user", "content": f"{refined_query}"}
         ]
     )
     response = response.choices[0].message.content
     return response, filtered_articles
 
-
 def perform_rag_request(message, filter_values, additional_context=""):
     combined_query = f"{additional_context} {message}".strip()
-    refind_query = refine_query(combined_query)
+    refined_query = refine_query(combined_query)
 
-    print("\n performing RAG based on query: " + str(refind_query) + "\n")
+    print("\n performing RAG based on query: " + str(refined_query) + "\n")
 
     # Combine the refined query with additional context if provided
-   
     response_string, filter = get_rag_string(combined_query, filter_values)
 
     system_query = f"""Du bist ein HR-Assistent des Stadtspitals Zürich, welcher Fragen von Angestellten beantwortet. Antworte basierend auf den Inhalten in den folgenden Artikeln: <Artikelinhalt>{response_string}</artikelinhalt> und nur wenn die Inhalte relevant zur Frage sind.
     Antworte professionell und kurz ohne Begrüssung oder Verabschiedung. Verwende direkte Zitate aus den Artikeln und setze diese in Anführungszeichen. Gib am Ende eine Liste aller relevanten Artikel und Artikeltitel an. Bei Fragen welche überhaupt nichts mit der Arbeit zutun haben, lenke den User zurück zum Thema. """
 
     response = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-4",
         messages=[
             {"role": "system", "content": f"{system_query}"},
-            {"role": "user", "content": f"{refind_query}"}
+            {"role": "user", "content": f"{refined_query}"}
         ]
     )
     response = response.choices[0].message.content
     return response
-
-
-
 
 def inquire_more_information(message):
     global times_inquired
@@ -250,8 +215,7 @@ def inquire_more_information(message):
 
     print("Aktuelle convo...: " + str(inquired_infos))
     print("\n Inquiring more info... \n")
-    system_query = f"Frage genauer nach, was der User wissen will um die originale Anfrage '{
-        message}' zu präzisieren. Akzeptiere nur personalrechtliche Fragen welche um in deiner Rolle als HR-Berater am Stadtspital Zürich relevant sind. Geh davon aus, dass der User immer ein Angestellter des Stadtspitals Zürich ist."
+    system_query = f"Frage genauer nach, was der User wissen will um die originale Anfrage '{message}' zu präzisieren. Akzeptiere nur personalrechtliche Fragen welche um in deiner Rolle als HR-Berater am Stadtspital Zürich relevant sind. Geh davon aus, dass der User immer ein Angestellter des Stadtspitals Zürich ist."
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
@@ -266,16 +230,11 @@ def inquire_more_information(message):
     user_input = get_user_input()
     return user_input
 
-
-
-
-
-
 def decide_action(message, type):
 
     if type == 1:
         print("\n evaluating Question... \n")
-        prompt = f"Given the following user message, decide what action should be taken. The options are: perform_rag_request, inquire_more_information, end_conversation. If the User asks a relevant question regarding the employment or thing relevant to the employment, decide to 'perform_rag_request'. End the conversation if the Questions are mean, unprofessional or insulting. Inquire more Information if the Question is unclear.  \n\nUser message: {message}\n\nAction:"
+        prompt = f"Given the following user message, decide what action should be taken. The options are: perform_rag_request, inquire_more_information, end_conversation. If the User asks a relevant question regarding employment or something relevant to employment, decide to 'perform_rag_request'. End the conversation if the Questions are mean, unprofessional or insulting. Inquire more information if the Question is unclear.  \n\nUser message: {message}\n\nAction:"
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
@@ -307,16 +266,12 @@ def decide_action(message, type):
             action = response.choices[0].message.content
             print(action)
             return action, user_input
-        
-
-
 
 def get_user_filter():
     print("Welche Mitarbeitergruppe betirfft deine Frage?")
     print("1: Nicht-Ärzliches Personal")
     print("2: Assistenzärzte")
     print("3: Kaderärzte (OA.i.V. mit FA / OA / LA / CA)")
-    print("4: Unklar / Keine Angabe\n")
     while True:
         choice = get_user_input()
         if choice == "1":
@@ -332,7 +287,6 @@ def get_user_filter():
             bot_response("Bitte zwischen 1-3 wählen!")
     print("\n Filter chosen: " + str(filter_values) + "\n")
     return filter_values    
-
 
 def initiate_conversation(user_id):
     role = f"Du bist ein HR-Assistent welcher Fragen von Angestellten des Stadtspitals Zürich beantwortet."
@@ -353,9 +307,7 @@ def add_to_convo(convo, message):
     convo += message
     return convo
 
-
-
-def chat(user_id):
+def chat():
     global keepalive
     keepalive = True
     currentConvo = True
@@ -365,24 +317,20 @@ def chat(user_id):
         user_input = get_user_input()
         filter = get_user_filter()
         while currentConvo:
-            desicion, reply = decide_action(user_input, 1)
+            decision, reply = decide_action(user_input, 1)
             convo = add_to_convo(convo, reply)
 
             print("\nCurrent convo: " + convo + "\n")
 
-            if desicion == "inquire_more_information":
+            if decision == "inquire_more_information":
                 response = inquire_more_information(reply)
                 convo = add_to_convo(convo, response)
 
-            elif desicion == "perform_rag_request":
+            elif decision == "perform_rag_request":
                 response, articles =  perform_rag_request_with_context(convo, filter, additional_context="")
-                #response_2 = perform_rag_request_with_context(convo, filter, additional_context="")
                 convo = add_to_convo(convo, response)
                 print("\nBOT response with context function: \n")
                 bot_response(response)
-                #print("\n")
-                #print("\nBOT response without context function: \n")
-                #bot_response(response_2)
                 action, user_input = decide_action(response, 2)   
                 if action == "followup":
                     bot_response("Was ist deine Folgefrage?")
@@ -400,41 +348,15 @@ def chat(user_id):
                 keepalive = False
                 break
 
-    c.execute("INSERT INTO logs (user_id, message, response, articles, action) VALUES (?, ?, ?, ?, ?)",
-                        (user_id, convo, reply, articles, action))
-    conn.commit()                
-
-   
-def chatbot(user_id):
+def chatbot():
     print("Chatbot initialized. Type 'quit' to exit.")
-    bot_response(initiate_conversation(user_id))
+    bot_response(initiate_conversation(1))
     while True:
-        chat(user_id)
-
+        chat()
 
 def main():
     print("Welcome! Please choose an option:")
-    print("1. Register")
-    print("2. Login")
-    choice = input("Enter choice: ")
-
-    username = input("Username: ")
-    password = getpass("Password: ")
-
-    if choice == '1':
-        register(username, password, c, conn)
-        user_id = login(username, password)
-        if user_id:
-            chatbot(user_id)
-    elif choice == '2':
-        user_id = login(username, password, c)
-        if user_id:
-            chatbot(user_id)
-    else:
-        print("Invalid choice.")
-
-
+    chatbot()
 
 if __name__ == "__main__":
     main()
-
