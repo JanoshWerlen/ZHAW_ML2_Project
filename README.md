@@ -1,7 +1,9 @@
 Aktuelle funktionierende Version:
 
-Start: 
+Start Lokal: 
 
-RAG_CHATBOT_QE --> python app.py 
+chatbotv2 --> python chatbotv2.py 
 
-Verbinden via Browser.
+Verbinden via Browser:
+
+python app.py (nicht fertig!) 
