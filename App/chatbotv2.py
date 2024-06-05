@@ -54,6 +54,7 @@ def bot_response(message):
     print(message)
 
 def get_user_input():
+    print("Bitte gib eine Frage ein:\n")
     message = input("\n> ")
     return message    
 
@@ -190,7 +191,7 @@ def check_rag_for_context(message, filter):
 
     return response_string, articles
 
-def perform_rag_request(message, filter_values, additional_context=""):
+def perform_rag_request_with_context(message, filter_values, additional_context=""):
     combined_query = f"{additional_context} {message}".strip()
     refind_query = refine_query(combined_query)
 
@@ -214,6 +215,31 @@ def perform_rag_request(message, filter_values, additional_context=""):
     )
     response = response.choices[0].message.content
     return response, filtered_articles
+
+
+def perform_rag_request(message, filter_values, additional_context=""):
+    combined_query = f"{additional_context} {message}".strip()
+    refind_query = refine_query(combined_query)
+
+    print("\n performing RAG based on query: " + str(refind_query) + "\n")
+
+    # Combine the refined query with additional context if provided
+   
+    response_string, filter = get_rag_string(combined_query, filter_values)
+
+    system_query = f"""Du bist ein HR-Assistent des Stadtspitals Zürich, welcher Fragen von Angestellten beantwortet. Antworte basierend auf den Inhalten in den folgenden Artikeln: <Artikelinhalt>{response_string}</artikelinhalt> und nur wenn die Inhalte relevant zur Frage sind.
+    Antworte professionell und kurz ohne Begrüssung oder Verabschiedung. Verwende direkte Zitate aus den Artikeln und setze diese in Anführungszeichen. Gib am Ende eine Liste aller relevanten Artikel und Artikeltitel an. Bei Fragen welche überhaupt nichts mit der Arbeit zutun haben, lenke den User zurück zum Thema. """
+
+    response = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {"role": "system", "content": f"{system_query}"},
+            {"role": "user", "content": f"{refind_query}"}
+        ]
+    )
+    response = response.choices[0].message.content
+    return response
+
 
 
 
@@ -249,7 +275,7 @@ def decide_action(message, type):
 
     if type == 1:
         print("\n evaluating Question... \n")
-        prompt = f"Given the following user message, decide what action should be taken. The options are: perform_rag_request, inquire_more_information, end_conversation. If the User asks a relevant question regarding employment or similar, decide to 'perform_rag_request'. End the conversation if the Questions are mean, unprofessional or insulting.  \n\nUser message: {message}\n\nAction:"
+        prompt = f"Given the following user message, decide what action should be taken. The options are: perform_rag_request, inquire_more_information, end_conversation. If the User asks a relevant question regarding the employment or thing relevant to the employment, decide to 'perform_rag_request'. End the conversation if the Questions are mean, unprofessional or insulting. Inquire more Information if the Question is unclear.  \n\nUser message: {message}\n\nAction:"
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
@@ -268,7 +294,7 @@ def decide_action(message, type):
         while True:
             bot_response("\nWillst du eine Folgefrage stellen? (Folgefragen versuchen den bisherigen Kontext mit einzubeziehen)\n")
             user_input = get_user_input().strip().lower()
-            prompt = f"Given the following user message, decide what action should be taken. The options are: followup, followup_with_question, newquestion. Choose 'followup' if the user-response indicates a positive sentiment to the Question 'Willst du eine Folgefrage stellen?', If the user response contains already a question, decide 'followup_with_question'. Choose 'newquestion' if the user does not want to ask a followup question. \n\nUser message: {user_input}\n\nAction:"
+            prompt = f"Given the following user message, decide what action should be taken. The options are: followup, followup_with_question, newquestion. Choose 'followup' if the user-response indicates a positive sentiment to the Question 'Willst du eine Folgefrage stellen?', If the user response contains already a question you should respond 'followup_with_question'. Choose 'newquestion' if the user does not want to ask a followup question. \n\nUser message: {user_input}\n\nAction:"
             response = client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[
@@ -342,14 +368,21 @@ def chat(user_id):
             desicion, reply = decide_action(user_input, 1)
             convo = add_to_convo(convo, reply)
 
+            print("\nCurrent convo: " + convo + "\n")
+
             if desicion == "inquire_more_information":
                 response = inquire_more_information(reply)
                 convo = add_to_convo(convo, response)
 
             elif desicion == "perform_rag_request":
-                response, articles =  perform_rag_request(convo, filter, additional_context="")
+                response, articles =  perform_rag_request_with_context(convo, filter, additional_context="")
+                #response_2 = perform_rag_request_with_context(convo, filter, additional_context="")
                 convo = add_to_convo(convo, response)
+                print("\nBOT response with context function: \n")
                 bot_response(response)
+                #print("\n")
+                #print("\nBOT response without context function: \n")
+                #bot_response(response_2)
                 action, user_input = decide_action(response, 2)   
                 if action == "followup":
                     bot_response("Was ist deine Folgefrage?")
