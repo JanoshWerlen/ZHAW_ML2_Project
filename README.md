@@ -2,7 +2,7 @@ Aktuelle funktionierende Version:
 
 Start Lokal: 
 
-chatbot_local_ --> python chatbot_local_.py 
+chatbot_local --> python chatbot_local.py 
     - create own login or
     - use login "1" and password "1"
 
