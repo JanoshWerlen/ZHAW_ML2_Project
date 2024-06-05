@@ -18,20 +18,15 @@ client.api_key = os.getenv('OPENAI_API_KEY')
 
 # Load Models
 model_large = "text-embedding-3-large"
-model_small = "text-embedding-3-small"
 
-index_path_ABPR = "data/JSON/articles_main.index"
-json_path_ABPR = "data/JSON/articles_main_embedded.json"
-#index_path_ABPR = "data/ABPR/articles_large.index"
-#json_path_ABPR = "data/ABPR/articles_large.json"
-#index_path_ABPR_small = "data/ABPR/articles.index"
-#json_path_ABPR_small = "data/ABPR/articles.json"
+index_path_ABPR = "data/3_embedded/ABPR/ABPR_embedded.index"
+json_path_ABPR = "data/3_embedded/ABPR/ABPR_embedded.json"
 
-index_path_ARG = "data/ARG/articles.index"
-json_path_ARG = "data/ARG/articles_embedded.json"
+index_path_ARG = "data/3_embedded/AA/AA_embedded.index"
+json_path_ARG = "data/3_embedded/AA/AA_embedded.json"
 
-index_path_KAR = "data/KAR/articles.index"
-json_path_KAR = "data/KAR/articles_embedded.json"
+index_path_KAR = "data/3_embedded/KAR/KAR_embedded.index"
+json_path_KAR = "data/3_embedded/KAR/KAR_embedded.json"
 
 
 # Database setup
@@ -50,16 +45,9 @@ def get_embedding_large(text, tags, model=model_large):
     combine = text + " " .join(tags)
     return openai.embeddings.create(input=[combine], model=model).data[0].embedding
 
-def get_embedding_small(text, tags, model=model_small):
-    text = text.replace("\n", " ")
-    combine = text + " " .join(tags)
-    return openai.embeddings.create(input=[combine], model=model).data[0].embedding
-
 def generate_query_embedding(query, filtered_values):
     if filtered_values in ["ABPR", "KAR", "ARG"]:
         return get_embedding_large(query, [])
-    elif filtered_values == "ARG":
-        return get_embedding_small(query, [])
     else:
         raise ValueError("Invalid filtered_values provided")
 
