@@ -1,0 +1,12 @@
+The goal of the project stems from the problem that legal documents are large in size and interwoven. 
+Oftentimes, questions are hard to link to the right and relevant articles. 
+One reason for this is that titles of articles are often not precise enough for the average person to find the answers they need. 
+Furthermore, it usually takes a lot of time to find the right content, 
+especially when multiple legal documents are connected and therefore need to be consulted together.
+
+The goal of this project, therefore, is to create a RAG-Bot that can take user inputs in the form of a legal question and return relevant articles and provide responses that can help the user continue their research. 
+It is important to state that AI itself should NOT be used to provide legally binding responses. So the response should only be seen as a way to find the most relevant legal texts that should be consulted by the users themselves.
+
+My personal motivation derives from my employment in HR, where many employees are very unfamiliar with the legal bases they need to adhere to. 
+Also, many of the employees within HR need to dedicate time to find the right legal groundwork when responding to questions posed by other employees. 
+This bot can help reduce the research time by finding and providing relevant articles that correspond to the question at hand.

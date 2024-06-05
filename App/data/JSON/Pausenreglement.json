@@ -39,21 +39,6 @@
         }
     },
     {
-        "article_number": "Art. 3.1",
-        "title": "Pausenregelung für Assistenzärztinnen und -ärzte",
-        "text": "Assistenzärztinnen und -ärzte unterstehen dem Arbeitsgesetz (ArG). Für sie gilt die folgende Pausenregelung:\n− Bei Diensten von mindestens 5.5 Stunden muss die 15-minütige, bezahlte Kurzpause pro Halbtag zwingend bezogen werden.\n− Bei Diensten ab 7 Stunden muss die 15-minütige, bezahlte Kurzpause zwingend zweimal bezogen werden.\n− Bei Diensten ab 9 Stunden ist zusätzlich zu den zwei bezahlten 15-minütigen Kurzpausen eine unbezahlte Pause von mindestens 30 Minuten zu beziehen. Beginn und Ende der Pause sind im Polypoint PEP zu erfassen. Im Polypoint PEP werden grundsätzlich bei allen Diensten von mehr als sechs Stunden automatisch 30 Minuten unbezahlte Pause abgezogen, sofern keine oder eine zu kurze Stempelung erfolgt.",
-        "metadata": {
-            "type": "General",
-            "tags": [
-                "Pausenregelung",
-                "Assistenzärztinnen",
-                "Assistenzärzte"
-            ],
-            "created_at": "2024-05-21T11:00:00Z",
-            "Gesetzestext": "PReg"
-        }
-    },
-    {
         "article_number": "Art. 3.2",
         "title": "Verfügbarkeit während der Pause",
         "text": "Der/die Mitarbeitende muss in der Zeit der Pause nicht für Arbeiten zur Verfügung stehen. Die Vorgesetzten haben die Arbeitsabläufe so zu organisieren, dass ein Pausenbezug für die Mitarbeitenden möglich ist. Für den Pausenbezug gelten jedoch nicht die gleichen Anforderungen wie für den Bezug von Freizeit und es müssen nicht die gleichen Gestaltungsmöglichkeiten gegeben sein. So ist es für den Pausenbezug z.B. nicht notwendig, dass das Gebäude verlassen werden kann. Ist ein Pausenbezug ausnahmsweise nicht möglich und kann die Pause nicht nachgeholt werden, ist die automatisch generierte Pause im Polypoint PEP zu löschen. Eine Verkürzung der Dienst- resp. Arbeitszeit durch den Bezug der Verpflegungspause am Anfang oder Ende des Arbeitseinsatzes ist nicht möglich.",
