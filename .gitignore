@@ -6,12 +6,12 @@ RAG_CHATBOT_LAMA
 .env
 Archive
 
-ABPR
-ARG
-GSP_AA
-JSON
-KAR
-Pikett
+*ABPR
+*ARG
+*GSP_AA
+*JSON
+*KAR
+*Pikett
 
 
 .gitignore
