@@ -37,11 +37,9 @@ inquired_infos = []
 times_inquired = 0
 
 def load_json(file_path):
-    try:
-        with open(file_path, 'r', encoding='utf-8') as file:
-            return json.load(file)
-    finally:
-        print("file could not be loaded")        
+    with open(file_path, 'r', encoding='utf-8') as file:
+        return json.load(file)
+      
 
 # Your other functions
 def get_embedding_large(text, tags, model=model_large):
