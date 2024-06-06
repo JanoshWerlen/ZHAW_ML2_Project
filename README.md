@@ -4,7 +4,7 @@
 
 2 ) Connect via Browser:
 
-python app.py (nicht fertig!) 
+python app.py
     - create own login or
     - use login "1" and password "1"
 
