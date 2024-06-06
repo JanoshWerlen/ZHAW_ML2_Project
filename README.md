@@ -1,3 +1,7 @@
+Create a venv using python 3.12.1
+You can use requirements.txt to run all code or just requirements_minimal.txt to run the "app.py" 
+
+
 1 ) remove the "_temp" from the ".env_temp" and add the Keys.  
 
 
