@@ -2,8 +2,9 @@ Create a venv using python 3.12.1
 You can use requirements.txt to run all code or just requirements_minimal.txt to run the "app.py" 
 
 
-1 ) remove the "_temp" from the ".env_temp" and add the Keys.  
-
+1 ) remove the "_temp" from the ".env_temp" and add the Keys.
+  
+Keys can be requested from the Author Janosh Werlen via Whatsapp or Mail: werleja1@students.zhaw.ch
 
 
 2 ) Connect via Browser:
@@ -20,4 +21,5 @@ chatbot_local --> python chatbot_local.py
     - use login "1" and password "1"
 
 
-Motivation and Evaluation can be found under Project_Files
+Motivation and Evaluation can be found under Project_Files within the Jupyter-Notebooks 1-3
+
