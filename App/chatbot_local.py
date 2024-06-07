@@ -99,7 +99,6 @@ def get_rag_string(refined_query, filter_values):
     # Perform the search
     k = 5  # Number of nearest neighbors to retrieve
     distances, indices = index.search(query_embedding, k)
-    # Ensure 'indices' is a list of integers and not out of range
     indices = indices[0]
 
     # Retrieve the matching articles

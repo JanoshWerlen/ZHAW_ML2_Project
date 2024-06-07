@@ -41,7 +41,6 @@ def load_json(file_path):
         return json.load(file)
       
 
-# Your other functions
 def get_embedding_large(text, tags, model=model_large):
     text = text.replace("\n", " ")
     combine = text + " " .join(tags)
