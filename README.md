@@ -10,15 +10,15 @@ Keys can be requested from the Author Janosh Werlen via Whatsapp or Mail: werlej
 2 ) Connect via Browser:
 
 python app.py
-    - create own login or
-    - use login "1" and password "1"
+    - create own login
+
 
 
 2.5) A slighlty different Version can be run locally: 
 
 chatbot_local --> python chatbot_local.py 
-    - create own login or
-    - use login "1" and password "1"
+    - create own login
+
 
 
 Motivation and Evaluation can be found under Project_Files within the Jupyter-Notebooks 1-3
