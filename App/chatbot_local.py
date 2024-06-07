@@ -180,7 +180,7 @@ def perform_rag_request_with_context(message, filter_values, additional_context=
         model="gpt-4o",
         messages=[
             {"role": "system", "content": f"{system_query}"},
-            {"role": "user", "content": f"{refined_query}"}
+            {"role": "user", "content": f"{message}"}
         ]
     )
     response = response.choices[0].message.content
