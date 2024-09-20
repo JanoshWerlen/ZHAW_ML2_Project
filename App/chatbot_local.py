@@ -99,7 +99,6 @@ def get_rag_string(refined_query, filter_values):
     # Perform the search
     k = 5  # Number of nearest neighbors to retrieve
     distances, indices = index.search(query_embedding, k)
-    # Ensure 'indices' is a list of integers and not out of range
     indices = indices[0]
 
     # Retrieve the matching articles
@@ -180,7 +179,7 @@ def perform_rag_request_with_context(message, filter_values, additional_context=
         model="gpt-4o",
         messages=[
             {"role": "system", "content": f"{system_query}"},
-            {"role": "user", "content": f"{refined_query}"}
+            {"role": "user", "content": f"{message}"}
         ]
     )
     response = response.choices[0].message.content

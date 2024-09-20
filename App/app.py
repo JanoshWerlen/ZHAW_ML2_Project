@@ -41,7 +41,6 @@ def load_json(file_path):
         return json.load(file)
       
 
-# Your other functions
 def get_embedding_large(text, tags, model=model_large):
     text = text.replace("\n", " ")
     combine = text + " " .join(tags)
@@ -147,7 +146,7 @@ def perform_rag_request(message, filter_values, additional_context=""):
     Antworte professionell und kurz ohne Begrüssung oder Verabschiedung. Verwende direkte Zitate aus den Artikeln und setze diese in Anführungszeichen. Formatiere deine Antwort, dass diese gut lesbar ist und unterteile die Inhalte in Abschnitte. Gib am Ende eine Liste aller relevanten Artikel und Artikeltitel an. Bei Fragen welche überhaupt nichts mit der Arbeit zutun haben, lenke den User zurück zum Thema. Nutze maximal ca. 1000 Tokens """
 
     response = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": f"{system_query}"},
             {"role": "user", "content": f"{refind_query}"}
@@ -253,4 +252,4 @@ def chat():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5001, debug=True)
