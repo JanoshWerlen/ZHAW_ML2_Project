@@ -4,8 +4,6 @@ You can use requirements.txt to run all code or just requirements_minimal.txt to
 
 1 ) remove the "_temp" from the ".env_temp" and add the Keys.
   
-Keys can be requested from the Author Janosh Werlen via Whatsapp or Mail: werleja1@students.zhaw.ch
-
 
 2 ) Connect via Browser:
 
