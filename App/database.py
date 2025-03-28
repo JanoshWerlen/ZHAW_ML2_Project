@@ -4,8 +4,11 @@ from flask import Flask, request, jsonify, render_template, redirect, url_for, s
 from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "https://www.janoshwerlen.ch"}})
+
 app.secret_key = os.getenv('SECRET_KEY', 'your_secret_key')
 
 
@@ -94,7 +97,7 @@ def login():
         else:
             return 'Invalid credentials', 401
     return render_template('login.html')
-
+"""
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -110,7 +113,7 @@ def register():
             return str(e), 400
     return render_template('register.html')
 
-
+"""
 @app.route('/change_password', methods=['GET', 'POST'])
 @login_required
 def change_password():
