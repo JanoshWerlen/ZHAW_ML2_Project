@@ -8,7 +8,8 @@ from datetime import datetime
 app = Flask(__name__)
 app.secret_key = os.getenv('SECRET_KEY', 'your_secret_key')
 
-DATABASE = 'chatbot.db'
+
+DATABASE = 'data/chatbot.db'
 
 
 def get_db():

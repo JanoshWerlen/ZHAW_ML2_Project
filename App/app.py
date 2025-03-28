@@ -69,7 +69,7 @@ def get_files(filter_values):
 
 def refine_query(query):
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": f"Erweitere die User Frage: <anfrage>{query}</anfrage>, mit Suchbegriffen, damit die Frage möglichst gute RAG ergebnisse liefert. Der erweiterte Anfrage soll ich immer auf den Kontext einer Anstellung am Stadtspital Zürich in der Schweiz beziehen. Alle Antworten sollen als Fragen formuliert sein"},
         ]
@@ -100,7 +100,7 @@ def get_rag_string(refind_query, filter_values):
 def check_rag_for_context(message, filter):
     system_query = f"Suche im folgenden text nach allen genannten Artikeln und retourniere ausschliesslich eine Liste im format ['Art. X', 'Art. Y>'] der gefunden Atrikel: <text> {message} </text>, Ignoriere Allen Text vor dem 'Art.' und alles nach der Zahl."
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": f"{system_query}"},
         ],
@@ -163,7 +163,7 @@ def inquire_more_information(message):
     times_inquired += 1
     system_query = f"Prüfe ob die Frage '{message}' ausreicht, um Gesetztesartikel zu durchsuchen. Akzeptiere nur personalrechtliche Fragen welche als Mitarbeiter am Stadtspital Zürich relevant sind. Geh davon aus, dass der User immer ein Angestellter des Stadtspitals Zürich ist. Dies in maximal 50 Tokens. Wenn nein, Fordere den User auf, eine relevante Frage zu stellen."
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": f"{system_query}"},
         ],
@@ -181,7 +181,7 @@ def decide_action(message, type):
                         \nend_conversation: For messages that are mean, unprofessional, or insulting.
                         \nCarefully evaluate the tone and content of the user message to determine the correct action. \n\nUser message: {message}\n\nAction:"""
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": f"{prompt}"},
             ],
@@ -195,7 +195,7 @@ def decide_action(message, type):
         while True:
             prompt = f"Given the following user message, decide what action should be taken. The options are: followup, followup_with_question, newquestion. Choose 'followup' if the user-response indicates a positive sentiment to the Question 'Willst du eine Folgefrage stellen?', If the user response contains already a question, decide 'followup_with_question'. Choose 'newquestion' if the user does not want to ask a followup question. \n\nUser message: {message}\n\nAction:"
             response = client.chat.completions.create(
-                model="gpt-3.5-turbo",
+                model="gpt-4o-mini",
                 messages=[
                     {"role": "system", "content": f"{prompt}"},
                 ],
