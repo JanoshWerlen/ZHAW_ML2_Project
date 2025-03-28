@@ -12,10 +12,10 @@ from database import app, login_required, get_db, setup_database
 
 
 # Configure OpenAI API key
-client = openai.OpenAI()
 load_dotenv()
+op_ai_key = os.getenv('OPENAI_API_KEY')
+client = openai.OpenAI(api_key=op_ai_key)
 
-client.api_key = os.getenv('OPENAI_API_KEY')
 
 # Load Models
 model_large = "text-embedding-3-large"
@@ -252,4 +252,4 @@ def chat():
 
 
 #if __name__ == "__main__":
- #   app.run(host="0.0.0.0", port=5001, debug=True)
+   #app.run(host="0.0.0.0", port=5001, debug=True)
