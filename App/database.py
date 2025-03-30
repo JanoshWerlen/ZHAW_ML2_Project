@@ -97,7 +97,7 @@ def login():
         else:
             return 'Invalid credentials', 401
     return render_template('login.html')
-"""
+
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -113,7 +113,7 @@ def register():
             return str(e), 400
     return render_template('register.html')
 
-"""
+
 @app.route('/change_password', methods=['GET', 'POST'])
 @login_required
 def change_password():
